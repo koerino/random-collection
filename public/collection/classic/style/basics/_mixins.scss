@@ -1,0 +1,27 @@
+@import url(https://fonts.googleapis.com/css?family=Muli);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+//Default font-size is 16px, font-weight is 400, font-family is Muli, sans-serif
+@mixin font($size: 16px, $weight: 400, $family: Muli) {
+    font-size: $size;
+    font-weight: $weight;
+    font-family: $family;
+}
+
+//responsive design breakpoints
+@mixin responsive($deviceSize) {
+    @if $deviceSize == sm {
+        @media screen and (max-width: 767px) {@content}
+    }
+    @if $deviceSize == md {
+        @media screen and (min-width: 768px) and (max-width: 1023px) {@content}
+    }
+    @if $deviceSize == lg {
+        @media screen and (min-width: 1024px) and (max-width: 1199px) {@content}
+    }
+    @if $deviceSize == xl {
+        @media screen and (min-width: 1200px) {@content}
+    }
+}

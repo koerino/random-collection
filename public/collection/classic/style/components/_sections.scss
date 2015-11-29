@@ -1,0 +1,58 @@
+#A {
+    padding: 10em 6em 5em;
+    background-color: $milk-white;
+    @include responsive(md) {
+        padding: 8em 2em 4em;
+    }
+    @include responsive(sm) {
+        padding: 6em 1em 3em;
+    }
+    .col-sm-4 {
+        padding-left: 3em;
+        padding-right: 3em;
+        @include responsive(md) {
+            padding-left: 1.5em;
+            padding-right: 1.5em;
+        }
+        > * {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+    }
+    img {
+        width: 120px;
+        height: 120px;
+    }
+    span {
+        color: $pure-black;
+        @include font(18px);
+        margin: 4.2em 0 2.5em;
+        @include responsive(sm) {
+            margin: 3em 0;
+        }
+    }
+}
+#B {
+    padding: 6em 3em;
+    background-color: $pure-white;
+    color: $platinum;
+    text-align: center;
+    span {
+        @include font(42px);
+        i {
+            font-size: 50px;
+        }
+    }
+    #img-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .img-left {
+            margin-right: 1.25em;
+        }
+        .img-up {
+            margin-bottom: 1.25em;
+        }
+    }
+}
