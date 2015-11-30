@@ -1,21 +1,19 @@
 #A {
-    padding: 10em 6em 6em;
+    padding: 10em 6em 3em;
     background-color: $pure-white;
     @include responsive(md) {
-        padding: 8em 2em 4em;
+        padding: 8em 2em 0;
     }
     @include responsive(sm) {
-        padding: 6em 1em 3em;
+        padding: 6em 1em 0;
     }
     .col-sm-4 {
+        @include center;
         padding-left: 3em;
         padding-right: 3em;
         @include responsive(md) {
             padding-left: 1.5em;
             padding-right: 1.5em;
-        }
-        > * {
-            @include center;
         }
     }
     img {
@@ -23,30 +21,44 @@
         height: 120px;
     }
     span {
-        color: $dark-grey;
         @include font(18px);
-        margin: 3em 0;
+        color: $dark-grey;
+        margin: 3em auto 2em;
+    }
+    a {
+        margin-bottom: 3em;
+    }
+    #left-link {
+        @include button-like($vivid-green);
+    }
+    #mid-link {
+        @include button-like($light-red);
+    }
+    #right-link {
+        @include button-like($grass-green);
     }
 }
 #B {
-    padding: 6em 3em 8em;
+    padding: 6em 3em 6em;
     background-color: $milk-white;
     color: $pure-grey;
     text-align: center;
     span {
-        @include font(42px);
-        i {
-            font-size: 50px;
+        @include font(24px);
+        @include responsive(lg) {
+            font-size: 36px;
         }
     }
     #hr-container {
-        @include center;
-        margin-top: 2em;
-        width: 76%;
+        margin: 2em auto 0;
+        width: 50%;
         hr {
             border-top: 4.2px double;
             width: 45%;
             margin-top: 12px;
+            @include responsive(sm) {
+                width: 35%;
+            }
         }
     }
     #hr-left {
@@ -56,15 +68,38 @@
         float: right;
     }
     #img-container {
-        display: flex;
-        justify-content: center;
         margin-top: 2.5em;
+        @include center;
+        flex-direction: row;
+        @include responsive(sm) {
+            flex-direction: column;
+        }
+        div {
+            background-size: cover;
+        }
     }
     #img-left {
-        margin-right: 1.75em;
+        width: 24em;
+        height: 33.25em;
+        margin-right: 1.25em;
+        @include responsive(sm) {
+            margin-bottom: 1.25em;
+            margin-right: 0;
+        }
+        background-image: url(../assets/img/flowers-tea-sugar.jpg);
+    }
+    #img-right {
+        > * {
+            width: 24em;
+            height: 16em;
+        }
     }
     #img-up {
-        margin-bottom: 1.5em;
+        background-image: url(../assets/img/coffee-cup-pen.jpg);
+        margin-bottom: 1.25em;
+    }
+    #img-bottom {
+        background-image: url(../assets/img/flowers-desk-vintage.jpg);
     }
 }
 #C {
@@ -72,7 +107,6 @@
     padding-top: 6em;
     .col-sm-6 > * {
         @include center;
-        text-align: center;
     }
     span {
         margin: 1.25em 0 3.75em;

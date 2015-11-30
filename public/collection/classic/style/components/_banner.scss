@@ -3,10 +3,7 @@
     height: 100vh;
     background-image: url(../assets/img/banner.jpg);
     background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include center;
     text-align: center;
     > * {
         color: $pure-white;
@@ -32,19 +29,12 @@
         }
     }
     a {
-        @include font(20px, 'Raleway');
-        padding: 0.75em 1.5em;
-        border: 2px solid;
-        text-decoration: none;
+        @include button-like($pure-white, 20px, 0.2);
         @include responsive(md) {
             font-size: 18px;
         }
         @include responsive(sm) {
             font-size: 16px;
-        }
-        &:hover {
-            cursor: pointer;
-            background-color: rgba(225, 225, 225, 0.3);
         }
     }
 }

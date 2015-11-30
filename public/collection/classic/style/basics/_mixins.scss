@@ -19,15 +19,29 @@
         @media screen and (min-width: 768px) and (max-width: 1023px) {@content}
     }
     @if $deviceSize == lg {
-        @media screen and (min-width: 1024px) and (max-width: 1199px) {@content}
-    }
-    @if $deviceSize == xl {
-        @media screen and (min-width: 1200px) {@content}
+        @media screen and (min-width: 1024px) {@content}
     }
 }
 
+//center elements using flex display
 @mixin center {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+//button-like links
+@mixin button-like($colour: $pure-white, $font-size: 18px, $opacity: 0.1) {
+    @include font($font-size, 400, 'Lato');
+    color: $colour;
+    padding: 0.75em 1.5em;
+    border: 2px solid $colour;
+    text-decoration: none;
+    &:hover {
+        cursor: pointer;
+        background-color: rgba($colour, $opacity);
+    }
 }
