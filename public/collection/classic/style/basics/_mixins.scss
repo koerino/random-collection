@@ -24,9 +24,9 @@
 }
 
 //center elements using flex display
-@mixin center {
+@mixin center($direction: row) {
     display: flex;
-    flex-direction: column;
+    flex-direction: $direction;
     align-items: center;
     justify-content: center;
     margin-left: auto;

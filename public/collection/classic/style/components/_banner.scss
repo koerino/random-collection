@@ -3,7 +3,7 @@
     height: 100vh;
     background-image: url(../assets/img/banner.jpg);
     background-size: cover;
-    @include center;
+    @include center(column);
     text-align: center;
     > * {
         color: $pure-white;
