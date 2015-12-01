@@ -1,6 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Muli);
-@import url(https://fonts.googleapis.com/css?family=Raleway);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import url(https://fonts.googleapis.com/css?family=Lato);
 
 //Default font-size is 16px, font-weight is 400, font-family is Muli, sans-serif
@@ -43,5 +41,13 @@
     &:hover {
         cursor: pointer;
         background-color: rgba($colour, $opacity);
+    }
+}
+
+//links in footer hover effect
+@mixin hover {
+    &:hover {
+        cursor: pointer;
+        color: $dark-grey;
     }
 }

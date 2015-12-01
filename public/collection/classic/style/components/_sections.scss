@@ -40,24 +40,26 @@
 #B {
     padding: 6em 3em 6em;
     background-color: $milk-white;
-    color: $pure-grey;
+    color: $dark-grey;
     text-align: center;
     span {
-        @include font(24px);
-        @include responsive(lg) {
-            font-size: 36px;
+        @include font(30px);
+        @include responsive(sm) {
+            font-size: 18px;
         }
     }
     #hr-container {
         margin: 2em auto 0;
-        width: 50%;
+        @include responsive(md) {
+            width: 80%;
+        }
+        @include responsive(lg) {
+            width: 50%;
+        }
         hr {
             border-top: 4.2px double;
             margin-top: 12px;
             width: 45%;
-            @include responsive(sm) {
-                width: 35%;
-            }
         }
     }
     #hr-left {

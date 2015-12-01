@@ -1,0 +1,53 @@
+#footer-container {
+    padding-top: 3em;
+    color: $pure-grey;
+    background-color: $milk-white;
+    @include font(16px, 400, 'Lato');
+    @include center;
+    .col-xs-4, .col-xs-12 {
+        margin-bottom: 2em;
+        @include center(column);
+        @include responsive(sm) {
+            text-align: center;
+        }
+    }
+    .fixed-width {
+        width: 80%;
+        @include responsive(sm) {
+            width: 100%;
+        }
+    }
+    .highlight {
+        color: $dark-grey;
+        margin-bottom: 1em;
+    }
+    a {
+        color: inherit;
+        text-decoration: none;
+        @include hover;
+    }
+    #larger {
+        font-size: 18px;
+    }
+    .input-group {
+        * {
+            border-color: $dark-grey;
+            box-shadow: none;
+        }
+    }
+    hr {
+        border-top: 1px solid $pure-grey;
+        margin-bottom: 0;
+    }
+    #icon-container {
+        text-align: center;
+        i {
+            font-size: 24px;
+            margin: 0.75em 0.75em 0.75em 0;
+            @include hover;
+        }
+        span {
+            display: inline-block;
+        }
+    }
+}
