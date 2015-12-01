@@ -45,9 +45,9 @@
 }
 
 //links in footer hover effect
-@mixin hover {
+@mixin hover($colour: rgba($pure-white, 0.85)) {
     &:hover {
         cursor: pointer;
-        color: $dark-grey;
+        color: $colour;
     }
 }

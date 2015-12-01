@@ -1,4 +1,30 @@
 header {
+    width: 100%;
     position: absolute;
-    top: 0;
+    div {
+        @include font(18px);
+        color: $pure-white;
+        position: inherit;
+        top: 1.25em;
+    }
+    #left {
+        left: 5%;
+        * {
+            display: inline-block;
+            margin-left: 1.25em;
+        }
+    }
+    #right {
+        right: 5%;
+        * {
+            margin-right: 1.25em;
+        }
+    }
+    #login, li {
+        @include hover;
+    }
+    #signup {
+        @include button-like;
+        padding: 0.25em 0.75em;
+    }
 }
