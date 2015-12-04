@@ -19,22 +19,17 @@
         }
     }
     h2 {
-        @include font(24px);
+        @include font;
         margin: 0 2em 2.25em;
         @include responsive(md) {
             font-size: 20px;
         }
-        @include responsive(sm) {
-            font-size: 16px;
+        @include responsive(lg) {
+            font-size: 24px;
         }
     }
     a {
-        @include button-like($pure-white, 20px, 0.2);
-        @include responsive(md) {
-            font-size: 18px;
-        }
-        @include responsive(sm) {
-            font-size: 16px;
-        }
+        @include button-like;
+        font-size: 18px;
     }
 }

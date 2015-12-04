@@ -8,8 +8,8 @@
     }
     .col-sm-4 {
         @include center(column);
-        padding-left: 3em;
-        padding-right: 3em;
+        padding-left: 4em;
+        padding-right: 4em;
         @include responsive(md) {
             padding-left: 1.5em;
             padding-right: 1.5em;
@@ -20,7 +20,7 @@
         height: 120px;
     }
     span {
-        @include font(18px);
+        @include font;
         color: $dark-grey;
         margin: 3em auto 2em;
     }
@@ -28,13 +28,13 @@
         margin-bottom: 3em;
     }
     #left-link {
-        @include button-like($vivid-green);
+        @include button-like($vivid-green, 0.1);
     }
     #mid-link {
-        @include button-like($light-red);
+        @include button-like($light-red, 0.1);
     }
     #right-link {
-        @include button-like($grass-green);
+        @include button-like($grass-green, 0.1);
     }
 }
 #B {

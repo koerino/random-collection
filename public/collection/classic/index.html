@@ -6,30 +6,40 @@
         <meta charset='utf-8'>
         <meta name='viewport' content='width=device-width initial-scale=1.0'>
         <link rel='stylesheet' href='style/main.min.css'>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+        <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
         <link rel='stylesheet' href='lib/bootstrap.min.css'>
-        <script src="lib/bootstrap.min.js"></script>
+        <script src='lib/bootstrap.min.js'></script>
+        <script src='lib/jquery.js'></script>
     </head>
 
     <body>
         <header>
-            <div id='left'>
-                <span>Logo Here</span>
-                <ul>
-                    <li>About</li>
-                    <li>Features</li>
-                    <li>Developers</li>
-                    <li>Support</li>
-                </ul>
+            <div id='logo'>
+                <span>LOGO HERE</span>
+                <i class='fa fa-navicon' id='nav-trigger'></i>
             </div>
-            <div id='right'>
-                <span id='login'>Log In</span>
-                <span id='signup'>Sign Up</span>
+            <div class='nav-container nav-collapse'>
+                <div id='left'>
+                    <ul>
+                        <li class='nav-items'>About</li>
+                        <li class='nav-items'>How it works</li>
+                        <li class='nav-items'>Features</li>
+                        <li class='nav-items'>Developers</li>
+                        <li class='nav-items'>Support</li>
+                        <li class='nav-items'>Blog</li>
+                    </ul>
+                </div>
+                <div id='right'>
+                    <ul>
+                        <li class='nav-items'>Log In</li>
+                        <li id='signup'>Sign Up</li>
+                    </ul>
+                </div>
             </div>
         </header>
         <div id='banner'>
-            <h1>Lorem Ipsum</h1>
+            <h1>LOREM IPSUM</h1>
             <h2>Donec sapien erat commodo imperdiet, condimentum aliquet arcu.</h2>
             <a href='#A'>Get Started</a>
         </div>
@@ -56,7 +66,7 @@
             <section id='B'>
                 <span>– &nbsp Dolor justo? Justo! &nbsp – </span>
                 <div id='hr-container'>
-                    <hr id='hr-left'><i class="material-icons">local_cafe</i><hr id='hr-right'>
+                    <hr id='hr-left'><i class='material-icons'>local_cafe</i><hr id='hr-right'>
                 </div>
                 <div id='img-container'>
                     <div id='img-left'></div>
@@ -124,26 +134,35 @@
                     </div>
                     <div class='col-xs-12 col-sm-6'>
                         <div class='fixed-width highlight'>
-                            <span id='larger'><i class="fa fa-envelope-o"></i> &nbsp Subscribe to updates</span>
+                            <span id='larger'><i class='fa fa-envelope-o'></i> &nbsp Subscribe to updates</span>
                         </div>
                         <div class='input-group fixed-width'>
                             <input type='text' class='form-control' placeholder='Enter your email address'>
-                            <span class="input-group-btn">
-                                <button class="btn btn-default" type="button"><i class="fa fa-paper-plane"></i></button>
+                            <span class='input-group-btn'>
+                                <button class='btn btn-default' type='button'><i class='fa fa-paper-plane'></i></button>
                             </span>
                         </div>
                         <hr class='fixed-width'>
                         <div id='icon-container' class='fixed-width'>
-                            <i class="fa fa-facebook"></i>
-                            <i class="fa fa-twitter"></i>
-                            <i class="fa fa-linkedin"></i>
-                            <i class="fa fa-rss"></i>
-                            <i class="fa fa-github-alt"></i>
-                            <span>© 2042  The master</span>
+                            <i class='fa fa-facebook'></i>
+                            <i class='fa fa-twitter'></i>
+                            <i class='fa fa-linkedin'></i>
+                            <i class='fa fa-rss'></i>
+                            <i class='fa fa-github-alt'></i>
+                            <span>© 2042  The Master</span>
                         </div>
                     </div>
                 </div>
             </div>
         </footer>
+        <!-- jquery operations -->
+        <script>
+            $(document).ready(function() {
+                $('#nav-trigger, li').click(function() {
+                    $('#nav-trigger').toggleClass('fa-navicon fa-close');
+                    $('.nav-container').toggleClass('nav-collapse');
+                });
+            });
+        </script>
     </body>
 </html>
