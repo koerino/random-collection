@@ -35,6 +35,9 @@
             box-shadow: none;
         }
     }
+    button:focus {
+        outline: none;
+    }
     hr {
         border-top: 1px solid $pure-grey;
         margin-bottom: 0;
