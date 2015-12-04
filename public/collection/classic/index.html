@@ -159,8 +159,10 @@
         <script>
             $(document).ready(function() {
                 $('#nav-trigger, li').click(function() {
-                    $('#nav-trigger').toggleClass('fa-navicon fa-close');
-                    $('.nav-container').toggleClass('nav-collapse');
+                    if($('#nav-trigger').is(':visible')) {  //on small or medium screens
+                        $('#nav-trigger').toggleClass('fa-navicon fa-close');
+                        $('.nav-container').toggleClass('nav-collapse');
+                    }
                 });
             });
         </script>
