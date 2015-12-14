@@ -1,0 +1,114 @@
+#banner {
+    @include font($weight: 700);
+    color: $pure-white;
+    background-image: url(../assets/banner.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    @include responsive(sm) {
+        background-position: top center;
+    }
+    #caption {
+        @include responsive(sm) {
+            text-align: center;
+            padding-right: 6.5em;
+        }
+    }
+    h1 {
+        font-size: 48px;
+        line-height: 1em;
+        display: inline-block;
+        margin: 2.5em 0 0 1.25em;
+        @include responsive(md) {
+            font-size: 36px;
+        }
+        @include responsive(sm) {
+            font-size: 28px;
+            margin: 30vh 0 0;
+        }
+    }
+    #des {
+        font-size: 20px;
+        letter-spacing: 0.15em;
+        line-height: 1.5em;
+        display: block;
+        width: 30em;
+        margin: 1.5em 0 0 3em;
+        @include responsive(md) {
+            font-size: 18px;
+            margin-left: 2.5em;
+        }
+        @include responsive(sm) {
+            font-size: 16px;
+            text-align: center;
+            width: auto;
+            margin: 3em 1.5em;
+        }
+    }
+    #links {
+        margin: 2.5em 0 0 3.75em;
+        @include responsive(md) {
+            margin-left: 2.75em;
+        }
+        @include responsive(sm) {
+            margin: 0;
+            text-align: center;
+            > * {
+                font-size: 12px;
+            }
+        }
+    }
+    a {
+        @include button-like;
+        @include border-radius(10px);
+        display: inline-block;
+    }
+    #btn-right {
+        background-color: $light-red;
+        border-color: $light-red;
+        margin-left: 1.5em;
+        &:hover {
+            background-color: darken($light-red, 5%);
+            border-color: darken($light-red, 5%);
+        }
+    }
+    .words {
+        span {
+            @extend h1;
+            margin-left: 0;
+            //word alternation effect
+            position: absolute;
+            opacity: 0;
+            overflow: hidden;
+            @include animation(alternation, 15s, linear, 0s, infinite);
+            @for $i from 2 through 5 {
+                &:nth-child(#{$i}) {
+                    -webkit-animation-delay: 3*$i - 3s;
+                    -ms-animation-delay: 3*$i - 3s;
+                    animation-delay: 3*$i - 3s;
+                }
+            }
+        }
+    }
+    @include keyframes(alternation) {
+        0% { opacity: 0; }
+        2.5% {
+            opacity: 0;
+            @include translateY(-30px);
+        }
+        5% {
+            opacity: 1;
+            @include translateY(0px);
+        }
+        17.5% {
+            opacity: 1;
+            @include translateY(0px);
+        }
+        20% {
+            opacity: 0;
+            @include translateY(30px);
+        }
+        80% { opacity: 0; }
+        100% { opacity: 0; }
+    }
+}

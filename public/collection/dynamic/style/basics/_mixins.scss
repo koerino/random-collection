@@ -1,0 +1,89 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+//Default font-size is 16px, font-weight is 400, font-family is Raleway, sans-serif
+@mixin font($size: 16px, $weight: 400, $family: 'Raleway') {
+    font-size: $size;
+    font-weight: $weight;
+    font-family: $family;
+}
+
+//responsive design breakpoints
+@mixin responsive($deviceSize) {
+    @if $deviceSize == sm {
+        @media screen and (max-width: 767px) {@content}
+    }
+    @if $deviceSize == md {
+        @media screen and (min-width: 768px) and (max-width: 1023px) {@content}
+    }
+    @if $deviceSize == lg {
+        @media screen and (min-width: 1024px) {@content}
+    }
+}
+
+//animation
+@mixin animation($name:default, $duration:default, $speed:default, $delay: 0, $count: 1, $direction: normal) {
+    -webkit-animation: $name $duration $speed $delay $count $direction;
+	-ms-animation: $name $duration $speed $delay $count $direction;
+	animation: $name $duration $speed $delay $count $direction;
+}
+
+//animation keyframes
+@mixin keyframes($animation) {
+    @-webkit-keyframes #{$animation} {
+        @content; 
+    }
+    @-moz-keyframes #{$animation} {
+        @content;
+    }
+    @-o-keyframes #{$animation} {
+        @content;
+    }
+    @keyframes #{$animation} {
+        @content;
+    } 
+}
+
+//2d transformation
+@mixin translateY($y) {
+    -webkit-transform: translateY($y);
+    -moz-transform: translateY($y);
+    -ms-transform: translateY($y); 
+    transform: translateY($y);
+}
+
+//border radius; circles
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+//center elements using flex display
+@mixin center($direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+//button-like links
+@mixin button-like($colour: $pure-white, $font-size: 16px) {
+    @include font($font-size, 400, 'Lato');
+    color: $colour;
+    padding: 0.75em 2em;
+    border: 2px solid $colour;
+    &:hover {
+        background-color: rgba($colour, 0.2);
+    }
+}
+
+//hover effect for links
+@mixin hover($colour: rgba($pure-white, 0.85)) {
+    &:hover {
+        cursor: pointer;
+        color: $colour;
+    }
+}
