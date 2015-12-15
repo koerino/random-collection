@@ -69,19 +69,37 @@
     margin-right: auto;
 }
 
-//button-like links
-@mixin button-like($colour: $pure-white, $font-size: 16px) {
+//button-like links base style
+@mixin button-like-base($colour: $pure-white, $font-size: 16px) {
     @include font($font-size, 400, 'Lato');
+    @include border-radius(10px);
+    @include responsive(sm) {
+        font-size: 12px;
+    }
+    text-decoration: none;
     color: $colour;
     padding: 0.75em 2em;
     border: 2px solid $colour;
     &:hover {
         background-color: rgba($colour, 0.2);
+        cursor: pointer;
     }
 }
 
+//button-like links style 2
+@mixin button-like-2($colour: $light-red) {
+    color: $pure-white;
+    border-color: $colour;
+    background-color: $colour;
+    &:hover {
+        border-color: darken($colour, 5%);
+        background-color: darken($colour, 5%);
+    }
+}
+
+
 //hover effect for links
-@mixin hover($colour: rgba($pure-white, 0.85)) {
+@mixin hover($colour) {
     &:hover {
         cursor: pointer;
         color: $colour;

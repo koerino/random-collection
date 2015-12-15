@@ -1,0 +1,81 @@
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+#sections {
+    @include font;
+}
+#A{
+    background-color: $milk-white;
+    padding: 2em 5%;
+    text-align: center;
+    h5 {
+        font-size: 36px;
+        color: $light-red;
+        margin-bottom: 1em;
+        @include responsive(sm) {
+            font-size: 20px;
+        }
+    }
+    .carousel-indicators {
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .carousel-inner {
+        margin: auto;
+        width: 90%;
+        @include responsive(lg) {
+            width: auto;
+        }
+        .item, img {
+            margin: inherit;
+        }
+    }
+    .carousel-control {
+        background-image: none;
+        color: $light-red;
+    }
+    @media screen and (max-width: 1023px) {
+        .left span{
+            left: 0;
+        }
+        .right span {
+            right: 0;
+        }
+    }
+    > a {
+        @include button-like-base;
+        @include button-like-2($mint-green);
+        display: inline-block;
+        margin-top: 2.5em;
+        @include responsive(sm) {
+            font-size: 12px;
+        }
+    }
+}
+#B {
+    @include font(18px, 400, 'Lato');
+    @include responsive(md) {
+        font-size: 16px;
+        .col-sm-push-4 {
+            text-align: right;
+        }
+    }
+    @include responsive(sm) {
+        font-size: 13px;
+        padding: 0 3em;
+    }
+    color: $dark-grey;
+    letter-spacing: 0.15em;
+    .row {
+        margin: 3em 0;
+    }
+    img {
+        width: 142px;
+        height: 142px;
+        @include responsive(sm) {
+            display: block;
+            margin: 0 auto 3em;
+        }
+    }
+}
+
+
