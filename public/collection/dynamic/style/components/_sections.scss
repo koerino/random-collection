@@ -4,11 +4,11 @@
 }
 #A{
     background-color: $milk-white;
-    padding: 2em 5%;
+    padding: 2.5em 5% 3.5em;
     text-align: center;
     h5 {
         font-size: 36px;
-        color: $light-red;
+        color: $mint-green;
         margin-bottom: 1em;
         @include responsive(sm) {
             font-size: 20px;
@@ -77,5 +77,62 @@
         }
     }
 }
-
+#C {
+    @include font(24px);
+    background-color: $milk-white;
+    text-align: center;
+    padding: 2em;
+    @include responsive(sm) {
+        font-size: 18px;
+    }
+    h5 {
+        color: $dark-grey;
+        @include font(42px, 700);
+        @include responsive(sm) {
+            font-size: 22px;
+        }
+    }
+    .row {
+        margin-top: 3em;
+        img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 0.75em;
+            &:hover {
+                cursor: pointer;
+                +span {
+                    opacity: 1;
+                    transition: 0.5s linear;
+                }
+            }
+        }
+        span {
+            @include responsive(lg) {
+                opacity: 0;
+                margin: 0;
+            }
+            color: $mint-green; 
+            margin: 1em 0 1.5em;
+            display: block;
+        }
+    }
+    .block {
+        margin-bottom: 2em;
+        display: block;
+    }
+    hr {
+        border: 1px solid $mint-green;
+        width: 100%;
+        @include responsive(lg) {
+            width: 65%;
+        }
+    }
+    span {
+        color: $pure-grey;
+    }
+    a {
+        @include button-like-base;
+        @include button-like-2($mint-green);
+    }
+}
 

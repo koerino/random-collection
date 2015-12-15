@@ -5,6 +5,7 @@
     background-size: cover;
     width: 100%;
     height: 100vh;
+    min-height: 25em;
     @include responsive(sm) {
         background-position: top center;
     }
@@ -73,7 +74,7 @@
             opacity: 0;
             overflow: hidden;
             @include animation(alternation, 15s, linear, 0s, infinite);
-            @for $i from 2 through 5 {
+            @for $i from 1 through 5 {
                 &:nth-child(#{$i}) {
                     -webkit-animation-delay: 3*$i - 3s;
                     -ms-animation-delay: 3*$i - 3s;
@@ -84,15 +85,15 @@
     }
     @include keyframes(alternation) {
         0% { opacity: 0; }
-        2.5% {
+        2% {
             opacity: 0;
             @include translateY(-30px);
         }
-        5% {
+        4% {
             opacity: 1;
             @include translateY(0px);
         }
-        17.5% {
+        18% {
             opacity: 1;
             @include translateY(0px);
         }

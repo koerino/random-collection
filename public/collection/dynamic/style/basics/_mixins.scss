@@ -44,7 +44,7 @@
     } 
 }
 
-//2d transformation
+//2D transformation
 @mixin translateY($y) {
     -webkit-transform: translateY($y);
     -moz-transform: translateY($y);
@@ -96,7 +96,6 @@
         background-color: darken($colour, 5%);
     }
 }
-
 
 //hover effect for links
 @mixin hover($colour) {
