@@ -44,12 +44,26 @@
     } 
 }
 
-//2D transformation
-@mixin translateY($y) {
-    -webkit-transform: translateY($y);
-    -moz-transform: translateY($y);
-    -ms-transform: translateY($y); 
-    transform: translateY($y);
+//CSS3 transition
+@mixin transition($options...) {
+    -webkit-transition: $options;
+    -moz-transition: $options;
+    -o-transition: $options;
+    transition: $options;
+}
+
+//2D transformations
+@mixin translate($x, $y) {
+    -webkit-transform: translate($x, $y);
+    -moz-transform: translate($x, $y);
+    -ms-transform: translate($x, $y); 
+    transform: translate($x, $y);
+}
+@mixin rotate($angle) {
+    -webkit-transform: rotate($angle);
+    -moz-transform: rotate($angle);
+    -ms-transform: rotate($angle); 
+    transform: rotate($angle);
 }
 
 //border radius; circles
@@ -98,9 +112,11 @@
 }
 
 //hover effect for links
-@mixin hover($colour) {
+@mixin link($colour) {
+    text-decoration: none;
+    color: inherit;
     &:hover {
         cursor: pointer;
-        color: $colour;
+        color: rgba($colour, 0.7);
     }
 }

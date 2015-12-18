@@ -14,6 +14,26 @@
 
     <body>
         <header>
+            <div id='header-container'>
+                <span>LOGO</span>
+                <div id='nav-trigger'>
+                    <div class='top-line'></div>
+                    <div class='mid-line'></div>
+                    <div class='bottom-line'></div>
+                </div>
+                <ul>
+                    <li>About</li>                             
+                    <li>How it works</li>
+                    <li>Features</li>
+                    <li>Developers</li>
+                    <li>Support</li>
+                    <li>Blog</li>
+                    <ul id='nested-ul'>
+                        <li class='btn red'>Log In</li>
+                        <li class='btn green'>Sign Up</li>
+                    </ul>
+                </ul>
+            </div>
         </header>
         <div id='banner'>
             <div id='caption'>
@@ -142,10 +162,67 @@
             </section>
         </div>
         <footer>
-            
+            <div id='footer-container'>
+                <div class='row'>
+                    <div class='col-xs-12 col-sm-6'>
+                        <span class='highlight'>Subscribe to newsletter</span>
+                        <div class='input-group'>
+                            <input type='text' class='form-control' placeholder='Enter your email address'>
+                            <span class='input-group-btn'>
+                                <button class='btn btn-default' type='button'>Go!</button>
+                            </span>
+                        </div>
+                        <span class='highlight'>Find us on</span>
+                        <span>
+                            <i class='fa fa-facebook'></i>
+                            <i class='fa fa-twitter'></i>
+                            <i class='fa fa-linkedin'></i>
+                            <i class='fa fa-rss'></i>
+                            <i class='fa fa-github-alt'></i>
+                        </span>
+                    </div>
+                    <div class='col-xs-4 col-sm-2'>
+                        <span class='highlight'>LORUM</span>
+                        <a>Ornare</a>
+                        <a>Sapien</a>
+                        <a>Amet</a>
+                        <a>Felis</a>
+                        <a>Etiam</a>
+                    </div>
+                    <div class='col-xs-4 col-sm-2'>
+                        <span class='highlight'>IPSUM</span>
+                        <a>Sagittis</a>
+                        <a>Litora</a>
+                        <a>Risus</a>
+                        <a>Vitae</a>
+                        <a>Hendre</a>
+                    </div>
+                    <div class='col-xs-4 col-sm-2'>
+                        <span class='highlight'>DOLOR</span>
+                        <a>Libero</a>
+                        <a>Aliquam</a>
+                        <a>Congue</a>
+                        <a>Tellus</a>
+                        <a>Donec</a>
+                    </div>
+                </div>
+                <div id='bottom'>
+                    <a>Privacy</a>
+                    <a>Terms of services</a>
+                    <span>© 2042  The Master</span>
+                </div>
+            </div>
         </footer>
         <script>
             $(document).ready(function() {
+                $('#nav-trigger').click(function() {
+                    $(this).children().toggleClass('active');
+                    $('ul').toggleClass('open');
+                });
+                $('li').click(function() {
+                    $('#nav-trigger').children().toggleClass('active');
+                    $('ul').toggleClass('open');          
+                });
             });
         </script>
     </body>
