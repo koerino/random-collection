@@ -215,13 +215,9 @@
         </footer>
         <script>
             $(document).ready(function() {
-                $('#nav-trigger').click(function() {
-                    $(this).children().toggleClass('active');
-                    $('ul').toggleClass('open');
-                });
-                $('li').click(function() {
+                $('#nav-trigger, li').click(function() {
                     $('#nav-trigger').children().toggleClass('active');
-                    $('ul').toggleClass('open');          
+                    $('ul').toggleClass('open');
                 });
             });
         </script>
