@@ -13,7 +13,7 @@ var server = http.createServer(app);
 
 //environment configuration
 app.set('port', process.env.PORT || 3000);
-app.use(favicon(__dirname + '/public/favicon.icns'));
+app.use(favicon(__dirname + '/public/window-programming.icns'));
 //set static file directory
 app.use('/public', express.static(__dirname + '/public'));
 

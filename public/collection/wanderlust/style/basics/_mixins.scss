@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
 
-//Default font-size is 16px, font-weight is 400, font-family is Raleway, sans-serif
-@mixin font($size: 16px, $weight: 400, $family: 'Lato') {
+//Default font-size is 18px, font-weight is 400, font-family is Lato, sans-serif
+@mixin font($size: 18px, $weight: 400, $family: 'Lato') {
     font-size: $size;
     font-weight: $weight;
     font-family: $family;
@@ -20,7 +20,7 @@
     }
 }
 
-//animation
+/*animation
 @mixin animation($name:default, $duration:default, $speed:default, $delay: 0, $count: 1, $direction: normal) {
     -webkit-animation: $name $duration $speed $delay $count $direction;
 	-ms-animation: $name $duration $speed $delay $count $direction;
@@ -70,7 +70,7 @@
     -webkit-border-radius: $radius;
     -moz-border-radius: $radius;
     border-radius: $radius;
-}
+}*/
 
 //center elements using flex display
 @mixin center($direction: row) {
@@ -82,10 +82,9 @@
     margin-right: auto;
 }
 
-//button-like links base style
-@mixin button-like-base($colour: $pure-white, $font-size: 16px) {
-    @include font($font-size, 400, 'Lato');
-    @include border-radius(10px);
+//button style
+@mixin buttonlike-base($colour: $pure-white, $font-size: 16px) {
+    @include font($font-size);
     @include responsive(sm) {
         font-size: 12px;
     }
@@ -99,8 +98,8 @@
     }
 }
 
-//button-like links style 2
-@mixin button-like-2($colour: $light-red) {
+//button style 2
+@mixin buttonlike-2($colour: $) {
     color: $pure-white;
     border-color: $colour;
     background-color: $colour;
