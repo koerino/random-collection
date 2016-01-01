@@ -1,10 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
 
 //Default font-size is 18px, font-weight is 400, font-family is Lato, sans-serif
-@mixin font($size: 18px, $weight: 400, $family: 'Lato') {
+@mixin font($size: 18px, $weight: 400) {
     font-size: $size;
     font-weight: $weight;
-    font-family: $family;
+    font-family: 'Lato';
 }
 
 //responsive design breakpoints
@@ -83,14 +83,14 @@
 }
 
 //button style
-@mixin buttonlike-base($colour: $pure-white, $font-size: 16px) {
+@mixin buttonlike-base($colour: $pure-white, $font-size: 18px) {
     @include font($font-size);
     @include responsive(sm) {
         font-size: 12px;
     }
     text-decoration: none;
     color: $colour;
-    padding: 0.75em 2em;
+    padding: 0.6em 1.75em;
     border: 2px solid $colour;
     &:hover {
         background-color: rgba($colour, 0.2);
@@ -99,9 +99,9 @@
 }
 
 //button style 2
-@mixin buttonlike-2($colour: $) {
+@mixin buttonlike-2($colour: $vivid-green) {
     color: $pure-white;
-    border-color: $colour;
+    border: none;
     background-color: $colour;
     &:hover {
         border-color: darken($colour, 5%);

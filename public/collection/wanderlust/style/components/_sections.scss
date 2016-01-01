@@ -1,0 +1,14 @@
+#A {
+    @include center(column);
+    text-align: center;
+    @include font($weight: 700);
+    color: $dark-grey;
+    padding: 3em 0;
+    h2 {
+        font-size: 42px;
+    }
+    span {
+        font-size: 20px;
+        margin-bottom: 2em;
+    }
+}
