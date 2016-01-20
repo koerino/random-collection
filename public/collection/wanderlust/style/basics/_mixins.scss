@@ -20,29 +20,6 @@
     }
 }
 
-/*animation
-@mixin animation($name:default, $duration:default, $speed:default, $delay: 0, $count: 1, $direction: normal) {
-    -webkit-animation: $name $duration $speed $delay $count $direction;
-	-ms-animation: $name $duration $speed $delay $count $direction;
-	animation: $name $duration $speed $delay $count $direction;
-}
-
-//animation keyframes
-@mixin keyframes($animation) {
-    @-webkit-keyframes #{$animation} {
-        @content; 
-    }
-    @-moz-keyframes #{$animation} {
-        @content;
-    }
-    @-o-keyframes #{$animation} {
-        @content;
-    }
-    @keyframes #{$animation} {
-        @content;
-    } 
-}
-
 //CSS3 transition
 @mixin transition($options...) {
     -webkit-transition: $options;
@@ -50,27 +27,6 @@
     -o-transition: $options;
     transition: $options;
 }
-
-//2D transformations
-@mixin translate($x, $y) {
-    -webkit-transform: translate($x, $y);
-    -moz-transform: translate($x, $y);
-    -ms-transform: translate($x, $y); 
-    transform: translate($x, $y);
-}
-@mixin rotate($angle) {
-    -webkit-transform: rotate($angle);
-    -moz-transform: rotate($angle);
-    -ms-transform: rotate($angle); 
-    transform: rotate($angle);
-}
-
-//border radius; circles
-@mixin border-radius($radius) {
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-    border-radius: $radius;
-}*/
 
 //center elements using flex display
 @mixin center($direction: row) {
