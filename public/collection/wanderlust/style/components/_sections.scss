@@ -5,7 +5,7 @@
     color: $dark-grey;
     padding: 3em 0;
     h2 {
-        font-size: 42px;
+        font-size: 36px;
     }
     span {
         font-size: 20px;
@@ -14,4 +14,78 @@
     .row {
         margin-bottom: 1.5em;
     }
+    .img-lg {
+        width: 632px;
+        height: 300px;
+        &:hover {
+            cursor: pointer;
+            .overlay {
+                opacity: 1;
+            }
+            span {
+                height: 2.5em;
+                opacity: 1;
+            }
+        }
+    }
+    .col-md-4 > div {
+        @extend .img-lg;
+        width: 300px;
+    }
+    @for $i from 1 through 10 {
+        #img#{$i} {
+            background-image: url(../assets/img/#{$i}.jpg);
+        }
+    }
+    .overlay {
+        opacity: 0;
+        width: inherit;
+        height: inherit;
+        background-color: rgba($pure-black, 0.35);
+        @include transition(opacity, 0.5s, ease);
+        span {
+            opacity: 0;
+            color: $pure-white;
+            background-color: rgba($pure-black, 0.25);
+            display: block;
+            padding-top: 0.5em;
+            height: 0;
+            @include transition(all, 0.5s, linear, 0.5s);
+        }
+    }
+    @include responsive(sm) {
+        #img2, #img9 {
+            margin-top: 1.5em;
+        }
+    }
+}
+#B {
+    @include font;
+    background-color: $milk-white;
+    padding: 2em 12em;
+    h3 {
+        @include font(32px, 700);
+        margin-bottom: 1.25em;
+        text-align: center;
+    }
+    #container {
+        @include center;
+    }
+    #left {
+        @include center(column);
+    }
+    img {
+        width: 100px;
+        height: 100px;
+        margin: 0.5em 0;
+    }
+    #right {
+        padding: 3em;
+        margin-left: 5em;
+        border: 2px solid $pure-grey;
+    }
+}
+#C {
+    @include font(26px);
+    padding: 3em 0;
 }
