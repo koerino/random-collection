@@ -2,7 +2,7 @@
     @include center(column);
     text-align: center;
     @include font($weight: 700);
-    color: $dark-grey;
+    color: $pure-black;
     padding: 3em 0;
     h2 {
         font-size: 36px;
@@ -82,10 +82,25 @@
     #right {
         padding: 3em;
         margin-left: 5em;
-        border: 2px solid $pure-grey;
+        border: 2px solid $vivid-green;
     }
 }
 #C {
-    @include font(26px);
-    padding: 3em 0;
+    @include font;
+    padding: 2em 0;
+    text-align: center;
+    .container-fluid {
+        @include center;
+    }
+    h3 {
+        font-size: 28px;
+        margin-bottom: 0.5em;
+    }
+    img {
+        width: 200px;
+        height: 200px;
+        margin: 2em;
+        margin-top: 2em;
+        border: 1px 
+    }
 }
