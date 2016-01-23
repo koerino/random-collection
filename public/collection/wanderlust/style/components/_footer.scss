@@ -2,12 +2,18 @@
     background-color: $pure-black;
     padding: 1em 0;
     @include font;
+    @include responsive(sm) {
+        font-size: 14px;
+    }
     text-align: center;
     .footer-row {
         @include center;
         padding: 0.25em 0;
     }
     .top {
+        @include responsive(sm) {
+            flex-direction: column-reverse;
+        }
         div {
             margin: 0 1em;
         }
@@ -22,6 +28,13 @@
         font-size: 22px;
         a {
             margin-right: 0.75em;
+        }
+        @include responsive(sm) {
+            padding-bottom: 0.5em;
+            font-size: 18px;
+            a {
+                margin-right: 1.25em;
+            }
         }
     }
     .bottom {

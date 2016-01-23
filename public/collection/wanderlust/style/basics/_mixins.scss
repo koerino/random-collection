@@ -42,7 +42,7 @@
 @mixin buttonlike-base($font-size: 18px) {
     @include font($font-size);
     @include responsive(sm) {
-        font-size: 12px;
+        font-size: 14px;
     }
     border: none;
     text-decoration: none;

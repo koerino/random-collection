@@ -6,10 +6,19 @@
     padding: 3em 0 1.5em;
     h2 {
         font-size: 36px;
+        @include responsive(md) {
+            font-size: 30px;
+        }
+        @include responsive(sm) {
+            font-size: 18px;
+        }
     }
     span {
         font-size: 20px;
         margin-bottom: 2em;
+        @include responsive(sm) {
+            font-size: 14px;
+        }
     }
     .row {
         margin-bottom: 1.5em;
@@ -63,12 +72,31 @@
     @include font;
     background-color: $milk-white;
     color: $dark-grey;
-    padding: 2em 12em 1em;
+    padding: 2em 10em 1em;
+    @include responsive(md) {
+        padding-left: 5em;
+        padding-right: 2.5em;
+    }
+    @include responsive(sm) {
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 14px;
+    }
     #container {
         @include center;
+        @include responsive(sm) {
+            flex-direction: column;
+        }
     }
     #left {
         @include center(column);
+        @include responsive(sm) {
+            flex-direction: row;
+            margin-bottom: 2.5em;
+            img {
+                margin: 0 2em;
+            }
+        }
     }
     img {
         width: 100px;
@@ -83,16 +111,34 @@
     h5 {
         @include font(32px, 700);
         margin-bottom: 1em;
-        text-align: center;
+        @include responsive(md) {
+            font-size: 28px;
+        }
+        @include responsive(sm) {
+            font-size: 20px;
+        }
     }
 }
 #C {
-    padding: 1em 5em;
+    padding: 1em;
     text-align: center;
     @include font(16px);
+    @include responsive(lg) {
+        padding-left: 5em;
+        padding-right: 5em;
+    } 
+    @include responsive(sm) {
+        padding-bottom: 2.5em;
+    }
     h3 {
         @include font(32px, 700);
         margin-bottom: 0.5em;
+        @include responsive(md) {
+            font-size: 26px;
+        }
+        @include responsive(sm) {
+            font-size: 20px;
+        }
     }
     .col-container {
         @include center(column);
@@ -109,8 +155,15 @@
             height: 200px;
         }
         h5 {
-            @include font(20px, 700);
+            @include font(18px, 700);
             margin: 1em 0;
+            white-space: nowrap;
+        }
+        span {
+            white-space: nowrap;
+            @include responsive(md) {
+                font-size: 13px;;
+            }
         }
         a {
             @include buttonlike-base(16px);
