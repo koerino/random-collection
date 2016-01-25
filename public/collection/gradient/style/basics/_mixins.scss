@@ -1,7 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
 
-//Default font-size is 16px, font-weight is 400, font-family is Open Sans, sans-serif. For small screens the default font-size is 12px
-@mixin font($size: 16px, $weight: 400, $family: 'Open Sans') {
+//Default font-size is 16px, font-weight is 400, font-family is Ubuntu, sans-serif. For small screens the default font-size is 12px
+@mixin font($size: 16px, $weight: 400, $family: 'Ubuntu') {
     font-size: $size;
     font-weight: $weight;
     font-family: $family;
