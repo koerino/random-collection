@@ -1,10 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 
 //Default font-size is 18px, font-weight is 400, font-family is Raleway, sans-serif
-@mixin font($size: 18px, $weight: 400) {
+@mixin font($size: 16px, $weight: 400) {
     font-size: $size;
     font-weight: $weight;
     font-family: 'Raleway';
+    letter-spacing: 0.15em;
+    @include responsive(sm) {
+        font-size: 12px;
+    }
 }
 
 //responsive design breakpoints
@@ -18,29 +22,6 @@
     @if $deviceSize == lg {
         @media screen and (min-width: 1024px) {@content}
     }
-}
-
-/*animation
-@mixin animation($name:default, $duration:default, $speed:default, $delay: 0, $count: 1, $direction: normal) {
-    -webkit-animation: $name $duration $speed $delay $count $direction;
-	-ms-animation: $name $duration $speed $delay $count $direction;
-	animation: $name $duration $speed $delay $count $direction;
-}
-
-//animation keyframes
-@mixin keyframes($animation) {
-    @-webkit-keyframes #{$animation} {
-        @content; 
-    }
-    @-moz-keyframes #{$animation} {
-        @content;
-    }
-    @-o-keyframes #{$animation} {
-        @content;
-    }
-    @keyframes #{$animation} {
-        @content;
-    } 
 }
 
 //CSS3 transition
@@ -58,19 +39,13 @@
     -ms-transform: translate($x, $y); 
     transform: translate($x, $y);
 }
-@mixin rotate($angle) {
-    -webkit-transform: rotate($angle);
-    -moz-transform: rotate($angle);
-    -ms-transform: rotate($angle); 
-    transform: rotate($angle);
-}
 
 //border radius; circles
 @mixin border-radius($radius) {
     -webkit-border-radius: $radius;
     -moz-border-radius: $radius;
     border-radius: $radius;
-}*/
+}
 
 //center elements using flex display
 @mixin center($direction: row) {
@@ -78,30 +53,28 @@
     flex-direction: $direction;
     align-items: center;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-//button style
-@mixin buttonlike-base($colour: $pure-white, $font-size: 18px) {
+//button-like links base style
+@mixin buttonlike-base($colour: $milk-white, $font-size: 16px) {
     @include font($font-size);
     @include responsive(sm) {
         font-size: 12px;
     }
     text-decoration: none;
     color: $colour;
-    padding: 0.6em 1.75em;
+    padding: 0.75em 1.5em;
     border: 2px solid $colour;
     &:hover {
-        background-color: rgba($colour, 0.2);
+        background-color: rgba($colour, 0.15);
         cursor: pointer;
     }
 }
 
-//button style 2
-@mixin buttonlike-2($colour: $vivid-green) {
-    color: $pure-white;
-    border: none;
+//button-like links style 2
+@mixin buttonlike-2($colour) {
+    color: $milk-white;
+    border-color: $colour;
     background-color: $colour;
     &:hover {
         border-color: darken($colour, 5%);
@@ -111,10 +84,10 @@
 
 //hover effect for links
 @mixin link($colour) {
-    text-decoration: none;
-    color: inherit;
+    color: $colour;
     &:hover {
+        text-decoration: none;
         cursor: pointer;
-        color: rgba($colour, 0.7);
+        color: darken($colour, 10%);
     }
 }

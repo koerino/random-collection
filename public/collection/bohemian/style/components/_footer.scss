@@ -1,0 +1,30 @@
+#footer-container {
+    background-color: $platinum;
+    width: 100%;
+    padding: 1em 1em 1em 0;
+    @include font(12px);
+    @include responsive(lg) {
+        font-size: 16px;
+    }
+    @include responsive(sm) {
+        @include center(column);
+    }
+    div {
+        display: inline-block;
+    }
+    .link {
+        @include link($pure-cyan);
+        margin-left: 1.25em;
+    }
+    #float-right {
+        float: right;
+        @include responsive(sm) {
+            margin-top: 0.5em;
+        }
+    }
+    span {
+        color: $dark-grey;
+        margin-left: 1.25em;
+        white-space: nowrap;
+    }
+}

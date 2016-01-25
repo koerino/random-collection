@@ -1,0 +1,180 @@
+#A {
+    background-color: $exlight-grey;
+    @include font;
+    padding: 2.5em 0 1.25em;
+    .row {
+        padding: 1.5em 5em;
+    }
+    .col-md-4 div {
+        width: 150px;
+        height: 150px;
+        margin: 0.5em auto 0;
+        background-size: cover;
+        @include border-radius(50%);
+        @media screen and (max-width: 1023px) {
+            margin-bottom: 2em;
+        }
+    }
+    @for $i from 1 through 5 {
+        #img-#{$i} {
+            background-image: url(../assets/img/sm-#{$i}.jpg);
+        }
+    }
+    @include responsive(lg) {
+        .margin-right {
+            margin-right: 5em;
+        }
+        .margin-left {
+            margin-left: 5em;
+        }
+    }
+    h5 {
+        @include font(24px, 700);
+        @include responsive(sm) {
+            font-size: 15px;
+        }
+        text-align: center;
+        color: $dark-grey;
+        margin-bottom: 1em;
+    }
+    hr {
+        border-bottom: 1px solid $platinum;
+        width: 50%;
+    }
+    .colored {
+        border-bottom-color: $soft-cyan;
+    }
+}
+#B {
+    padding: 2em 0;
+    background-color: $light-grey;
+    @include center(column);
+    text-align: center;
+    @include responsive(lg) {
+        flex-direction: row;
+        padding: 0 2em 2em;
+    }
+    h3 {
+        @include font(24px, 700);
+        @include responsive(sm) {
+            font-size: 18px;
+        }
+    }
+    span {
+        @include font;
+    }
+    #sq-wrapper {
+        display: flex;
+        margin-top: 1.5em;
+        @for $i from 1 through 3 {
+            #sq-#{$i} {
+                background-image: url(../assets/img/sq-#{$i}.jpg);
+            }
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            background-size: cover;
+            margin: auto;
+            @include responsive(md) {
+                width: 125px;
+                height: 125px;
+                margin: 1em;
+            }
+            @include responsive(lg) {
+                width: 150px;
+                height: 150px;
+                margin-right: 1.5em;
+            }
+        }
+    }
+    #link-wrapper {
+        display: flex;
+        flex-direction: column;
+        color: darken($light-grey, 42%);
+        margin-top: 3.5em;
+        @include responsive(lg) {
+            margin: 4.25em 0 0 2.5em;
+        } 
+        span {
+            margin-bottom: 1.75em;
+            white-space: nowrap;
+        }
+        i {
+            margin-right: 1em;
+        }
+        a {
+            @include link(darken($light-grey, 30%));
+        }
+    }
+}
+#C {
+    padding: 4.5em 1.75em 1.25em;
+    background-color: $exlight-grey;
+    .row > div {
+        @include center(column);
+        @include font;
+        margin-bottom: 2.5em;
+    }
+    .col-sm-6 {
+        div {
+            background-position: bottom right;
+            width: 300px;
+            height: 200px;
+            @media screen and (min-width: 1280px) {
+                width: 600px;
+                height: 400px;
+            }
+            @media screen and (min-width: 1000px) and (max-width: 1279px) {
+                width: 480px;
+                height: 320px;
+            } 
+        }
+    }
+    h5 {
+        @include font(18px, 700);
+        color: $dark-grey;
+        margin-top: 2.25em;
+    }
+    hr {
+        width: 70%;
+        border-top: 1px solid $blue-cyan;
+        @include responsive(lg) {
+            width: 30%;
+        }
+    }
+    @for $i from 1 through 4 {
+        #img-#{$i} {
+            background-image: url(../assets/img/#{$i}.jpg);
+        }
+    }
+}
+#D {
+    background-color: rgba($pure-black, 0.2);
+    height: 25em;
+    color: $exlight-grey;
+    @include center(column);
+    span {
+        @include font(26px, 700);
+        @include responsive(sm) {
+            font-size: 16px;
+        }
+        margin-bottom: 1.5em;
+    }
+    #btn-link {
+        @include buttonlike-base;
+        @include buttonlike-2($soft-cyan);
+        @include border-radius(15px);
+    }
+    .contacts {
+        padding-top: 2.5em;
+    }
+    .contacts a {
+        @include link($platinum);
+        font-size: 24px;
+        margin: 0 0.5em;
+        @include responsive(sm) {
+            font-size: 20px;
+        }
+    }
+}

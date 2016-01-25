@@ -42,6 +42,7 @@
             @include center(column);
             z-index: 2;
             li {
+                visibility: hidden;
                 opacity: 0;
                 @include translate(0, 1em);
                 font-size: 32px;
@@ -49,6 +50,7 @@
                 margin: 0.25em 0;
             }
             li.open {
+                visibility: visible;
                 opacity: 1;
                 @include translate(0, 0);
                 @include transition(all 0.7s ease 0.5s);
