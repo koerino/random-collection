@@ -17,7 +17,7 @@
     }
     @for $i from 1 through 5 {
         #img-#{$i} {
-            background-image: url(../assets/img/sm-#{$i}.jpg);
+            background-image: url(../img/sm-#{$i}.jpg);
         }
     }
     @include responsive(lg) {
@@ -68,7 +68,7 @@
         margin-top: 1.5em;
         @for $i from 1 through 3 {
             #sq-#{$i} {
-                background-image: url(../assets/img/sq-#{$i}.jpg);
+                background-image: url(../img/sq-#{$i}.jpg);
             }
         }
         div {
@@ -145,7 +145,7 @@
     }
     @for $i from 1 through 4 {
         #img-#{$i} {
-            background-image: url(../assets/img/#{$i}.jpg);
+            background-image: url(../img/#{$i}.jpg);
         }
     }
 }
