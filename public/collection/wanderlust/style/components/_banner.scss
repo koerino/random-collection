@@ -58,7 +58,7 @@
             @include buttonlike-base;
             @include buttonlike-2;
             &:focus {
-                outline: 0
+                outline: 0;
             }
         }
     }
