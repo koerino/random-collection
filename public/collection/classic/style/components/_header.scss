@@ -1,0 +1,90 @@
+//commonalities
+header {
+    width: 100%;
+    position: absolute;
+    color: $pure-white;
+}
+.nav-items {
+    @include hover;
+}
+#signup {
+    @include button-like($font-size: inherit);
+    padding: 0.25em 0.75em;
+}
+//layout for small and medium devices
+@media screen and (max-width: 1000px) {
+    header {
+        @include font(24px);
+        > * {
+            position: inherit;
+            width: inherit;
+        }
+    }
+    #logo {
+        padding: 0.75em;
+        z-index: 2;
+    }
+    #nav-trigger {
+        float: right;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .nav-container {
+        @include center(column);
+        background: rgba($pure-black, 0.7);
+        flex-direction: column-reverse;
+        height: 100vh;
+        padding-top: 4em;
+        z-index: 1;
+        > * {
+            @include center;
+            text-align: center;
+            li {
+                margin: 0 1em 1.5em;
+            }
+        }
+    }
+    .nav-collapse {
+        display: none;
+    }
+    #left {
+        flex-direction: column;
+    }
+    #right {
+        ul {
+            display: inline-flex;
+            align-items: center;
+        }
+    }
+}
+//layout for large screens
+@include responsive(lg) {
+    header {
+        @include font;
+        * {
+            display: inline-block;
+        }
+        li {
+            margin: 0 0.75em;
+        }
+    }
+    #logo {
+        width: 12.5%;
+        margin: 1em 0 0 1.25em;
+    }
+    .nav-container {
+        width: 85%;
+        float: right;
+    }
+    #left {
+        margin-top: 1em;
+    }
+    #right {
+        float: right;
+        margin: 0.75em 0.5em 0 0;
+    }
+    #nav-trigger {
+        display: none;
+    }
+}

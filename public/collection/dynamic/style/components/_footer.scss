@@ -1,0 +1,46 @@
+#footer-container {
+    padding: 1em 5em 0;
+    @include responsive(sm) {
+        padding: 1em;
+        text-align: center;
+    }
+    @include font;
+    color: $pure-grey;
+    background-color: $dark-grey;
+    .input-group {
+        margin-bottom: 1em;
+        * {
+            border-color: $dark-grey;
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }        
+    }
+    a, i {
+        @include link($pure-white);
+    }
+    i {
+        font-size: 26px;
+        padding: 0 0.25em;
+    }
+    .col-xs-4 {
+        @include center(column);
+    }
+    .highlight {
+        color: $pure-white;
+        letter-spacing: 0.12em;
+        margin: 1em 0;
+        display: inline-block;
+    }
+    #bottom {
+        text-align: center;
+        @include responsive(lg) {
+            text-align: left;
+        }
+        > * {
+            display: inline-block;
+            margin: 1.25em 0.75em 0.75em 0;
+        }
+    }
+}

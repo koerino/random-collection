@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width initial-scale=1.0'>
+    <link rel='stylesheet' href='style/main.min.css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+    <div id='mega-container'>
+        <header>
+            <i class="fa fa-bookmark-o"></i>
+            <h2>Lorem Ipsum Dolor</h2>
+            <input type='search'>
+            <button>SEARCH</button>
+            <div>
+                <a>SIGN IN</a>
+                <a>CART</a>
+            </div>
+        </header>
+        <div id='banner'>
+            <ul id='nav'>
+                <li id='leftmost'>Lorem</li>
+                <li>Ipsum</li>
+                <li>Dolor</li>
+                <li>Porta</li>
+                <li>Magna</li>
+                <li>Justo</li>
+                <li>Nulla</li>
+                <div id='dropdown'>
+                    <div>
+                        <div></div>
+                        <span>Link</span>
+                        <span>Link</span>
+                    </div>
+                    <div>
+                        <div></div>
+                        <span>Description</span>
+                        <span>Description</span>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Ipsum</li>
+                            <li>Dolor</li>
+                            <li>Porta</li>
+                            <li>Magna</li>
+                            <li>Justo</li>
+                            <li>Nulla</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Ipsum</li>
+                            <li>Dolor</li>
+                            <li>Porta</li>
+                            <li>Magna</li>
+                            <li>Justo</li>
+                            <li>Nulla</li>
+                        </ul>
+                    </div>
+                </div>
+            </ul>
+            <div id='background'>
+            </div>
+        </div>
+        <div id='sections'>
+            <div id='A'>
+                <span>Dignissim libero mi bibendum pede.</span>
+            </div>
+            <div id='B'>
+                <div>
+                    <div><span>Link</span></div>
+                    <div><span>Link</span></div>
+                    <div><span>Link</span></div>
+                </div>
+                <hr class='hr'>
+                <span>Ornare nulla ac est, interdum lectus.</span>
+                <hr class='hr'>
+            </div>
+            <div id='C'>
+                <div id='img'></div>
+                <div id='content'>
+                    <span>Sit molestie, nulla cursus, ligula urna, interdum blandit. Sed diam, nascetur pede tellus ad, turpis posuere harum faucibus lorem interdum, mi nunc. Tempor fusce, blandit diam quis maecenas magna. Nulla proin lacus mauris a, mauris tincidunt ut in justo fermentum. Viverra non interdum mi elit est, ipsum lectus, lectus aut ut ullamcorper neque nec nec odio habitant, dui interduma. Ac dictum, pharetra diam augue vitae, accumsan quisque faucibus commodo, integer, penatibus mus. Pellentesque orci arcu sed, erat nulla felis urna nisl eget est. Porttitor tellus tempus auctor, proin sagittis mus esse in elit, tincidunt lorem.</span>
+                </div>
+            </div>
+            <div id='D'>
+                <div id='overlay'>
+                    <div>
+                        <span>Mi diam malesuada vel erat</span>
+                        <a>Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div id='footer-container'>
+                <div>
+                        <span>LORUM</span>
+                        <hr>
+                        <a>Ornare</a>
+                        <a>Sapien</a>
+                        <a>Amet</a>
+                        <a>Felis</a>
+                        <a>Etiam</a>
+                </div>
+                <div>
+                        <span>IPSUM</span>
+                        <hr>
+                        <a>Sagittis</a>
+                        <a>Litora</a>
+                        <a>Risus</a>
+                        <a>Vitae</a>
+                        <a>Hendre</a>
+                </div>
+                <div>
+                        <span>DOLOR</span>
+                        <hr>
+                        <a>Libero</a>
+                        <a>Aliquam</a>
+                        <a>Congue</a>
+                        <a>Tellus</a>
+                        <a>Donec</a>
+                </div>
+                <div id='subscription'>
+                    <span><i class='fa fa-envelope-o'></i> &nbsp Get latest updates</span>
+                    <input type='text' placeholder='Enter your email address'>
+                    <div id='contact'>
+                        <button>Subscribe</button>
+                        <i class='fa fa-facebook'></i>
+                        <i class='fa fa-twitter'></i>
+                        <i class='fa fa-linkedin'></i>
+                        <i class='fa fa-rss'></i>
+                        <i class='fa fa-github-alt'></i>
+                    </div>
+                </div>
+                <div id='cpr'>
+                    <div><span>content</span></div>
+                    <span>© 2042  The Master</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('#nav > li').hover(function() {
+                $('#dropdown').toggleClass('open');
+            });
+        });
+    </script>
+</body>
+
+</html>

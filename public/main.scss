@@ -1,0 +1,151 @@
+@import 'reset';
+@import url(https://fonts.googleapis.com/css?family=Lato);
+//variables
+$platinum: #E5E4E2;
+$pure-grey: #9E9E9E;
+$dark-grey: #616161;
+$pure-orange: #FF7043;
+$pink-red: #FF304F;
+$scarlet: #FF2400;
+$soft-green: #73F7DD;
+//mixins
+//responsive design breakpoints
+@mixin responsive($deviceSize) {
+    @if $deviceSize == sm {
+        @media screen and (max-width: 767px) {@content}
+    }
+    @if $deviceSize == md {
+        @media screen and (min-width: 768px) and (max-width: 1023px) {@content}
+    }
+    @if $deviceSize == lg {
+        @media screen and (min-width: 1024px) {@content}
+    }
+}
+//CSS3 transition
+@mixin transition($options...) {
+    -webkit-transition: $options;
+    -moz-transition: $options;
+    -o-transition: $options;
+    transition: $options;
+}
+//button style
+@mixin buttonlike($colour) {
+    color: #FFFFFF;
+    background-color: $colour;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Lato';
+    padding: 0.75em 1.5em;
+    @include responsive(sm) {
+        font-size: 12px;
+    }
+    &:hover {
+        cursor: pointer;
+        background-color: darken($colour, 5%);
+    }
+}
+h1, h5, span {
+    font-family: 'Lato';
+}
+header {
+    width: 100%;
+    text-align: center;
+    padding-top: 1em;
+    img {
+        width: 70px; 
+        height: 70px;
+        vertical-align: middle;
+        @include responsive(sm) {
+            width: 35px;
+            height: 35px;
+        }
+    }
+    h1 {
+        font-size: 42px;
+        font-weight: 700;
+        color: $dark-grey;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 1em 0 0.5em 0.5em;
+        @include responsive(sm) {
+            font-size: 26px;
+        }
+    }
+    span {
+        font-size: 30px;
+        font-weight: 700;
+        color: $pure-grey;
+        display: block;
+        @include responsive(sm) {
+            font-size: 16px;
+        }
+    }
+}
+#mega-container {
+    padding-bottom: 3em;
+    @include responsive(lg) {
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+    .row {
+        margin-top: 1.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .grid {
+        width: 320px;
+        height: 320px;
+        margin: 1em 1em;
+        border: 1px solid $platinum;
+        background-size: cover;
+        @include responsive(sm) {
+            width: 240px;
+            height: 240px;
+        }
+        &:hover {
+            .overlay {
+                opacity: 1;
+            }
+        }
+    }
+    .overlay {
+        background-color: rgba(#000000, 0.3);
+        height: inherit;
+        >*{
+            display: inline-block;
+        }
+        opacity: 0;
+        @include transition(all, 0.5s, linear);
+        .view {
+            @include buttonlike(lighten($pink-red, 15%));
+            float: left;
+        }
+        .download {
+            @include buttonlike(lighten($pure-orange, 15%));
+        }
+        .res {
+            color: $soft-green;
+            margin-left: 0.75em;
+            @include responsive(sm) {
+                font-size: 12px;
+            }
+        }
+    }
+}
+footer {
+    padding: 0 0 0.5em 0.75em;
+    text-align: center;
+    color: $dark-grey;
+    .fa-heart {
+        color: $scarlet;
+    }
+    a {
+        text-decoration: none;
+        color: $pure-grey;
+        &:hover {
+            color: $dark-grey;
+        }
+    }
+}

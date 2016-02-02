@@ -1,0 +1,56 @@
+#footer-container {
+    color: $pure-grey;
+    background-color: $milk-white;
+    @include font;
+    @include center;
+    .col-xs-4, .col-xs-12 {
+        margin: 3.75em auto 2.5em;
+        @include center(column);
+        @include responsive(sm) {
+            text-align: center;
+            margin: 2em auto 0.25em;
+        }
+    }
+    .fixed-width {
+        width: 80%;
+        @include responsive(sm) {
+            width: 100%;
+        }
+    }
+    .highlight {
+        color: $dark-grey;
+        margin-bottom: 1em;
+    }
+    a {
+        color: inherit;
+        text-decoration: none;
+        @include hover($dark-grey);
+    }
+    #larger {
+        font-size: 18px;
+    }
+    .input-group {
+        * {
+            border-color: $dark-grey;
+            box-shadow: none;
+        }
+    }
+    button:focus {
+        outline: none;
+    }
+    hr {
+        border-top: 1px solid $pure-grey;
+        margin-bottom: 0;
+    }
+    #icon-container {
+        text-align: center;
+        i {
+            font-size: 24px;
+            margin: 0.75em 0.75em 0.75em 0;
+            @include hover($dark-grey);
+        }
+        span {
+            display: inline-block;
+        }
+    }
+}

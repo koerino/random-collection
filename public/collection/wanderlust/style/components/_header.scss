@@ -1,0 +1,24 @@
+header {
+    position: absolute;
+    width: 100%;
+    @include font(20px);
+    text-shadow: $dark-grey 1px 1px; 
+    @include responsive(sm) {
+        font-size: 16px;
+    }
+    color: $milk-white;
+    padding: 0.5em 1em 0;
+    span {
+        float: left;
+    }
+    ul {
+        float: right;
+        @include center;
+    }
+    li {
+        margin-left: 1em;   
+    }
+    a {
+        @include link($milk-white);
+    }
+}

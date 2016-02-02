@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width initial-scale=1.0'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel='stylesheet' href='main.min.css'>
+    </head>
+    <body>
+        <header>
+            <img src='assets/window-programming.svg'>
+            <h1>Random Ideas</h1>
+            <span>updated on an irregular basis</span>
+        </header>
+        <div id='mega-container'>
+            <div class='row'>
+                <div class='grid' id='classic'>
+                    <div class='overlay'>
+                        <a class='view' href='collection/classic/index.html'>View</a>
+                        <a class='download' href='collection/downloads/classic.zip'>Download</a>
+                        <span class='res'>Responsive</span>
+                    </div>
+                </div>
+                <div class='grid' id='dynamic'>
+                    <div class='overlay'>
+                        <a class='view' href='collection/dynamic/index.html'>View</a>
+                        <a class='download' href="collection/downloads/dynamic.zip">Download</a>
+                        <span class='res'>Responsive</span>
+                    </div>
+                </div>
+                <div class='grid' id='wanderlust'>
+                    <div class='overlay'>
+                        <a class='view' href='collection/wanderlust/index.html'>View</a>
+                        <a class='download' href="collection/downloads/wanderlust.zip">Download</a>
+                        <span class='res'>Responsive</span>
+                    </div>
+                </div>
+                <div class='grid' id='bohemian'>
+                    <div class='overlay'>
+                        <a class='view' href='collection/bohemian/index.html'>View</a>
+                        <a class='download' href="collection/downloads/bohemian.zip">Download</a>
+                        <span class='res'>Responsive</span>
+                    </div>
+                </div>
+                <div class='grid' id='grace'>
+                    <div class='overlay'>
+                        <a class='view' href='collection/grace/index.html'>View</a>
+                        <a class='download' href="collection/downloads/grace.zip">Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <span>Made with &nbsp <i class="fa fa-heart"></i>
+                &nbsp by K.K. &nbsp The use of literary text and pictures is solely arbitrary. Licensed under <a href='http://creativecommons.org/licenses/by/4.0/legalcode'><i class="fa fa-creative-commons"></i> 4.0</a></span>
+        </footer>
+        <script>
+            var elements = document.getElementsByClassName('grid');
+            for (var i = 0; i < elements.length; i++) {
+                var ele = elements[i];
+                ele.style.backgroundImage = 'url(assets/'+ele.id+'.jpg)';
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+//Default font-size is 18px, font-weight is 400, font-family is Raleway, sans-serif
+@mixin font($size: 16px, $weight: 400) {
+    font-size: $size;
+    font-weight: $weight;
+    font-family: 'Raleway';
+    letter-spacing: 0.15em;
+    @include responsive(sm) {
+        font-size: 12px;
+    }
+}
+
+//responsive design breakpoints
+@mixin responsive($deviceSize) {
+    @if $deviceSize == sm {
+        @media screen and (max-width: 767px) {@content}
+    }
+    @if $deviceSize == md {
+        @media screen and (min-width: 768px) and (max-width: 1023px) {@content}
+    }
+    @if $deviceSize == lg {
+        @media screen and (min-width: 1024px) {@content}
+    }
+}
+
+//CSS3 transition
+@mixin transition($options...) {
+    -webkit-transition: $options;
+    -moz-transition: $options;
+    -o-transition: $options;
+    transition: $options;
+}
+
+//2D transformations
+@mixin translate($x, $y) {
+    -webkit-transform: translate($x, $y);
+    -moz-transform: translate($x, $y);
+    -ms-transform: translate($x, $y); 
+    transform: translate($x, $y);
+}
+
+//border radius; circles
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+//center elements using flex display
+@mixin center($direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: center;
+}
+
+//button-like links base style
+@mixin buttonlike-base($colour: $milk-white, $font-size: 16px) {
+    @include font($font-size);
+    @include responsive(sm) {
+        font-size: 12px;
+    }
+    text-decoration: none;
+    color: $colour;
+    padding: 0.75em 1.5em;
+    border: 2px solid $colour;
+    &:hover {
+        background-color: rgba($colour, 0.15);
+        cursor: pointer;
+    }
+}
+
+//button-like links style 2
+@mixin buttonlike-2($colour) {
+    color: $milk-white;
+    border-color: $colour;
+    background-color: $colour;
+    &:hover {
+        border-color: darken($colour, 5%);
+        background-color: darken($colour, 5%);
+    }
+}
+
+//hover effect for links
+@mixin link($colour) {
+    color: $colour;
+    &:hover {
+        text-decoration: none;
+        cursor: pointer;
+        color: darken($colour, 10%);
+    }
+}

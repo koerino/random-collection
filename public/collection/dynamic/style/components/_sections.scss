@@ -1,0 +1,137 @@
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+#sections {
+    @include font;
+}
+#A{
+    background-color: $milk-white;
+    padding: 2.5em 5% 3.5em;
+    text-align: center;
+    h5 {
+        font-size: 36px;
+        color: $mint-green;
+        margin-bottom: 1em;
+        @include responsive(sm) {
+            font-size: 20px;
+        }
+    }
+    .carousel-indicators {
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .carousel-inner {
+        margin: auto;
+        width: 90%;
+        @include responsive(lg) {
+            width: auto;
+        }
+        .item, img {
+            margin: inherit;
+        }
+    }
+    .carousel-control {
+        background-image: none;
+        color: $light-red;
+    }
+    @media screen and (max-width: 1023px) {
+        .left span{
+            left: 0;
+        }
+        .right span {
+            right: 0;
+        }
+    }
+    > a {
+        @include button-like-base;
+        @include button-like-2($mint-green);
+        display: inline-block;
+        margin-top: 2.5em;
+        @include responsive(sm) {
+            font-size: 12px;
+        }
+    }
+}
+#B {
+    @include font(18px, 400, 'Lato');
+    @include responsive(md) {
+        font-size: 16px;
+        .col-sm-push-4 {
+            text-align: right;
+        }
+    }
+    @include responsive(sm) {
+        font-size: 13px;
+        padding: 0 3em;
+    }
+    color: $dark-grey;
+    letter-spacing: 0.15em;
+    .row {
+        margin: 3em 0;
+    }
+    img {
+        width: 142px;
+        height: 142px;
+        @include responsive(sm) {
+            display: block;
+            margin: 0 auto 3em;
+        }
+    }
+}
+#C {
+    @include font(24px);
+    background-color: $milk-white;
+    text-align: center;
+    padding: 2em;
+    @include responsive(sm) {
+        font-size: 18px;
+    }
+    h5 {
+        color: $dark-grey;
+        @include font(42px, 700);
+        @include responsive(sm) {
+            font-size: 22px;
+        }
+    }
+    .row {
+        margin-top: 3em;
+        img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 0.75em;
+            &:hover {
+                cursor: pointer;
+                +span {
+                    opacity: 1;
+                    @include transition(0.7s, linear);
+                }
+            }
+        }
+        span {
+            @include responsive(lg) {
+                opacity: 0;
+                margin: 0;
+            }
+            color: $mint-green; 
+            margin: 1em 0 1.5em;
+            display: block;
+        }
+    }
+    .block {
+        margin-bottom: 2em;
+        display: block;
+    }
+    hr {
+        border: 1px solid $mint-green;
+        width: 100%;
+        @include responsive(lg) {
+            width: 65%;
+        }
+    }
+    span {
+        color: $pure-grey;
+    }
+    a {
+        @include button-like-base;
+        @include button-like-2($mint-green);
+    }
+}

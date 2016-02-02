@@ -1,0 +1,181 @@
+#A {
+    @include center(column);
+    text-align: center;
+    @include font($weight: 700);
+    color: $dark-grey;
+    padding: 3em 0 1.5em;
+    h2 {
+        font-size: 36px;
+        @include responsive(md) {
+            font-size: 30px;
+        }
+        @include responsive(sm) {
+            font-size: 18px;
+        }
+    }
+    span {
+        font-size: 20px;
+        margin-bottom: 2em;
+        @include responsive(sm) {
+            font-size: 14px;
+        }
+    }
+    .row {
+        margin-bottom: 1.5em;
+    }
+    .img-lg {
+        width: 632px;
+        height: 300px;
+        &:hover {
+            cursor: pointer;
+            .overlay {
+                opacity: 1;
+            }
+            span {
+                height: 2.5em;
+                opacity: 1;
+            }
+        }
+    }
+    .col-md-4 > div {
+        @extend .img-lg;
+        width: 300px;
+    }
+    @for $i from 1 through 10 {
+        #img#{$i} {
+            background-image: url(../assets/img/#{$i}.jpg);
+        }
+    }
+    .overlay {
+        opacity: 0;
+        width: inherit;
+        height: inherit;
+        background-color: rgba($pure-black, 0.35);
+        @include transition(opacity, 0.5s, ease);
+        span {
+            opacity: 0;
+            color: $pure-white;
+            background-color: rgba($pure-black, 0.25);
+            display: block;
+            padding-top: 0.5em;
+            height: 0;
+            @include transition(all, 0.5s, linear, 0.5s);
+        }
+    }
+    @include responsive(sm) {
+        #img2, #img9 {
+            margin-top: 1.5em;
+        }
+        padding: 1.5em 0;
+    }
+}
+#B {
+    @include font;
+    background-color: $milk-white;
+    color: $dark-grey;
+    padding: 2em 10em;
+    @include responsive(md) {
+        padding-left: 5em;
+        padding-right: 2.5em;
+    }
+    @include responsive(sm) {
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 14px;
+    }
+    #container {
+        @include center;
+        @include responsive(sm) {
+            flex-direction: column;
+        }
+    }
+    #left {
+        @include center(column);
+        @include responsive(sm) {
+            flex-direction: row;
+            margin-bottom: 2.5em;
+            img {
+                margin: 0 2em;
+            }
+        }
+    }
+    img {
+        width: 100px;
+        height: 100px;
+        margin: 0.5em 0;
+    }
+    #right {
+        padding: 0 3em 1em;
+        margin-left: 5em;
+        border-left: 2px solid $platinum;
+        @include responsive(sm) {
+            padding: 0 2em 1em;
+            margin-left: 0;
+            border-left: none;
+        }
+    }
+    h5 {
+        @include font(32px, 700);
+        margin-bottom: 1em;
+        @include responsive(md) {
+            font-size: 28px;
+        }
+        @include responsive(sm) {
+            font-size: 20px;
+            text-align: center;
+        }
+    }
+}
+#C {
+    padding: 1em 1em 3em;
+    text-align: center;
+    @include font(16px);
+    @include responsive(lg) {
+        padding-left: 5em;
+        padding-right: 5em;
+    } 
+    @include responsive(sm) {
+        padding-bottom: 2.5em;
+    }
+    h3 {
+        @include font(32px, 700);
+        margin-bottom: 0.5em;
+        @include responsive(md) {
+            font-size: 26px;
+        }
+        @include responsive(sm) {
+            font-size: 20px;
+        }
+    }
+    .col-container {
+        @include center(column);
+        padding: 3.5em 2.5em;
+        margin-top: 3em;
+        border: 2px solid $platinum;
+        @include transition(border-color 0.25s linear);
+        &:hover {
+            cursor: pointer;
+            border-color: $soft-green;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+        }
+        h5 {
+            @include font(18px, 700);
+            margin: 1em 0;
+            white-space: nowrap;
+        }
+        span {
+            white-space: nowrap;
+            @include responsive(md) {
+                font-size: 13px;;
+            }
+        }
+        a {
+            @include buttonlike-base(16px);
+            @include buttonlike-2;
+            margin-top: 2em;
+        }   
+    }
+}

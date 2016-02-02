@@ -1,0 +1,114 @@
+#A {
+    padding: 10em 6em 3em;
+    @include responsive(md) {
+        padding: 8em 2em 1em;
+    }
+    @include responsive(sm) {
+        padding: 6em 1em 0;
+    }
+    .col-sm-4 {
+        @include center(column);
+        padding-left: 4em;
+        padding-right: 4em;
+        @include responsive(md) {
+            padding-left: 1.5em;
+            padding-right: 1.5em;
+        }
+    }
+    img {
+        width: 120px;
+        height: 120px;
+    }
+    span {
+        @include font;
+        color: $dark-grey;
+        margin: 3em auto 2em;
+    }
+    a {
+        margin-bottom: 3em;
+    }
+    #left-link {
+        @include button-like($vivid-green, 0.1);
+    }
+    #mid-link {
+        @include button-like($light-red, 0.1);
+    }
+    #right-link {
+        @include button-like($grass-green, 0.1);
+    }
+}
+#B {
+    padding: 6em 3em 6em;
+    background-color: $milk-white;
+    color: $dark-grey;
+    text-align: center;
+    span {
+        @include font(30px);
+        @include responsive(sm) {
+            font-size: 18px;
+        }
+    }
+    #hr-container {
+        margin: 2em auto 0;
+        @include responsive(md) {
+            width: 80%;
+        }
+        @include responsive(lg) {
+            width: 50%;
+        }
+        hr {
+            border-top: 4.2px double;
+            margin-top: 12px;
+            width: 45%;
+        }
+    }
+    #hr-left {
+        float: left;
+    }
+    #hr-right {
+        float: right;
+    }
+    #img-container {
+        margin-top: 2.5em;
+        @include center;
+        @include responsive(sm) {
+            flex-direction: column;
+        }
+        div {
+            background-size: cover;
+        }
+    }
+    #img-left {
+        background-image: url(../assets/img/flowers-tea-sugar.jpg);
+        width: 24em;
+        height: 33.25em;
+        margin-right: 1.25em;
+        @include responsive(sm) {
+            margin-bottom: 1.25em;
+            margin-right: 0;
+        }
+    }
+    #img-right {
+        > * {
+            width: 24em;
+            height: 16em;
+        }
+    }
+    #img-up {
+        background-image: url(../assets/img/coffee-cup-pen.jpg);
+        margin-bottom: 1.25em;
+    }
+    #img-bottom {
+        background-image: url(../assets/img/flowers-desk-vintage.jpg);
+    }
+}
+#C {
+    @extend #A;
+    padding-top: 6em;
+    .col-sm-6 > * {
+        @include center(column);
+    }
+    span {
+        margin: 1.25em 0 3.75em;
+    }
+}

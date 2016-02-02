@@ -1,0 +1,52 @@
+@import url(https://fonts.googleapis.com/css?family=Muli);
+
+//Default font-size is 16px
+@mixin font($size: 16px) {
+    font-size: $size;
+    font-weight: 400;
+    font-family: 'Muli', sans-serif;
+}
+
+//responsive design breakpoints
+@mixin responsive($deviceSize) {
+    @if $deviceSize == sm {
+        @media screen and (max-width: 767px) {@content}
+    }
+    @if $deviceSize == md {
+        @media screen and (min-width: 768px) and (max-width: 1000px) {@content}
+    }
+    @if $deviceSize == lg {
+        @media screen and (min-width: 1001px) {@content}
+    }
+}
+
+//center elements using flex display
+@mixin center($direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+//button-like links
+@mixin button-like($colour: $pure-white, $opacity: 0.3, $font-size: 16px) {
+    @include font($font-size);
+    color: $colour;
+    padding: 0.75em 1.5em;
+    border: 2px solid $colour;
+    text-decoration: none;
+    &:hover {
+        cursor: pointer;
+        background-color: rgba($colour, $opacity);
+    }
+}
+
+//hover effect for links
+@mixin hover($colour: rgba($pure-white, 0.85)) {
+    &:hover {
+        cursor: pointer;
+        color: $colour;
+    }
+}

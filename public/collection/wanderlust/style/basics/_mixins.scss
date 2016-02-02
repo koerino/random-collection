@@ -1,0 +1,72 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+//Default font-size is 18px, font-weight is 400, font-family is Lato, sans-serif
+@mixin font($size: 18px, $weight: 400) {
+    font-size: $size;
+    font-weight: $weight;
+    font-family: 'Lato';
+}
+
+//responsive design breakpoints
+@mixin responsive($deviceSize) {
+    @if $deviceSize == sm {
+        @media screen and (max-width: 767px) {@content}
+    }
+    @if $deviceSize == md {
+        @media screen and (min-width: 768px) and (max-width: 1023px) {@content}
+    }
+    @if $deviceSize == lg {
+        @media screen and (min-width: 1024px) {@content}
+    }
+}
+
+//CSS3 transition
+@mixin transition($options...) {
+    -webkit-transition: $options;
+    -moz-transition: $options;
+    -o-transition: $options;
+    transition: $options;
+}
+
+//center elements using flex display
+@mixin center($direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+//button style
+@mixin buttonlike-base($font-size: 18px) {
+    @include font($font-size);
+    @include responsive(sm) {
+        font-size: 14px;
+    }
+    border: none;
+    text-decoration: none;
+    padding: 0.6em 1.75em;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+//button style 2
+@mixin buttonlike-2 {
+    color: $pure-white;
+    background-color: $vivid-green;
+    &:hover {
+        background-color: darken($vivid-green, 5%);
+    }
+}
+
+//hover effect for links
+@mixin link($colour) {
+    color: $colour;
+    &:hover {
+        text-decoration: none;
+        cursor: pointer;
+        color: darken($colour, 20%);
+    }
+}
