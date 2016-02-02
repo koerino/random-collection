@@ -1,0 +1,60 @@
+#footer-container {
+    @include font;
+    @include center;
+    color: $dark-cyan;
+    background-color: $milk-white;
+    padding: 1.5em 3em;
+    > div {
+        @include center(column);
+        a {
+            margin-top: 0.75em;
+            @include link($dark-cyan);
+        }
+        span {
+            color: $pure-black;
+        }
+    }
+    #subscription {
+        @include center(column);
+        input {
+            width: 15em;
+            font-size: 18px;
+            border: 1px solid $dark-cyan;
+            padding: 0.25em 1em;
+            outline: 0;
+        }
+        span {
+            font-size: 20px;
+            margin: 0 1em 1.5em 0;
+        }
+    }
+    hr {
+        border-top: 1px solid $pure-grey;
+        width: 3.5em;
+    }
+    #contact {
+        @include center;
+        margin-top: 1.5em;
+        button {
+            @include buttonlike($dark-cyan);
+            font-size: 13px;
+            border: none;
+            margin: 0 1em;
+        }
+        i {
+            @include link($dark-cyan);
+            font-size: 20px;
+            margin: 0 0.5em;
+        }
+    }
+    #cpr {
+        @include center(column);
+        div {
+            @include center;
+            width: 135px;
+            height: 135px;
+            border: 1px solid $pure-cyan;
+            margin-bottom: 1em;
+        }
+    }
+}

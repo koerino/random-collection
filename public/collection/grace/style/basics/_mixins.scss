@@ -1,26 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-//Default font-size is 16px, font-weight is 400, font-family is Open Sans, sans-serif. For small screens the default font-size is 12px
+//Default font-size is 16px, font-weight is 400, font-family is Open Sans, sans-serif
 @mixin font($size: 16px, $weight: 400, $family: 'Open Sans') {
     font-size: $size;
     font-weight: $weight;
     font-family: $family;
-    @include responsive(sm) {
-        font-size: 12px;
-    }
-}
-
-//responsive design breakpoints
-@mixin responsive($deviceSize) {
-    @if $deviceSize == sm {
-        @media screen and (max-width: 767px) {@content}
-    }
-    @if $deviceSize == md {
-        @media screen and (min-width: 768px) and (max-width: 1023px) {@content}
-    }
-    @if $deviceSize == lg {
-        @media screen and (min-width: 1024px) {@content}
-    }
 }
 
 //CSS3 transition
@@ -29,21 +13,6 @@
     -moz-transition: $options;
     -o-transition: $options;
     transition: $options;
-}
-
-//2D transformations
-@mixin translate($x, $y) {
-    -webkit-transform: translate($x, $y);
-    -moz-transform: translate($x, $y);
-    -ms-transform: translate($x, $y); 
-    transform: translate($x, $y);
-}
-
-//border radius; circles
-@mixin border-radius($radius) {
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-    border-radius: $radius;
 }
 
 //center elements using flex display
@@ -56,47 +25,15 @@
     margin-right: auto;
 }
 
-//button-like links base style
-@mixin button-like-base($colour: $pure-white, $font-size: 16px) {
-    @include font($font-size, 400, 'Lato');
-    @include border-radius(10px);
-    @include responsive(sm) {
-        font-size: 12px;
-    }
+//button-like links
+@mixin buttonlike($colour) {
     text-decoration: none;
-    color: $colour;
-    padding: 0.75em 2em;
-    border: 2px solid $colour;
-    &:hover {
-        background-color: rgba($colour, 0.2);
-        cursor: pointer;
-    }
-}
-
-//button-like links base style
-@mixin buttonlike-base($colour: $milk-white, $font-size: 16px) {
-    @include font($font-size);
-    @include responsive(sm) {
-        font-size: 12px;
-    }
-    text-decoration: none;
-    color: $colour;
-    padding: 0.75em 1.5em;
-    border: 2px solid $colour;
-    &:hover {
-        background-color: rgba($colour, 0.15);
-        cursor: pointer;
-    }
-}
-
-//button-like links style 2
-@mixin buttonlike-2($colour) {
-    color: $milk-white;
-    border-color: $colour;
+    color: $pure-white;
     background-color: $colour;
+    padding: 0.75em 1.5em;
     &:hover {
-        border-color: darken($colour, 5%);
-        background-color: darken($colour, 5%);
+        background-color: darken($colour, 10%);
+        cursor: pointer;
     }
 }
 

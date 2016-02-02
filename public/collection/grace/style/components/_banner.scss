@@ -1,0 +1,61 @@
+#banner {
+    @include center(column);
+    @include font;
+    background-color: lighten($blue-ivy, 5%);
+    #nav {
+        @include center;
+        >li {
+            @include link($exlight-grey);
+            padding: 0.35em 1.5em;
+            border-left: 1px solid $exlight-grey;
+            &:hover {
+                background-color: $dark-cyan;
+            }
+        }
+        #leftmost {
+            border-left: none;
+        }
+        > div {
+            visibility: collapse;
+            position: absolute;
+            height: 24em;
+            width: 60em;
+            @include center;
+            margin-top: 1.75em;
+            left: 12.75em;
+            @include transition(all, 0.3s, linear);
+            &.open, &:hover {
+                visibility: visible;
+            }
+            > div {
+                @include center(column);
+                background-color: $pure-white;
+                border: 1px solid $exlight-grey;
+                width: 25%;
+                height: 100%;
+                div {
+                    width: 10em;
+                    height: 10em;
+                    border: 1px solid $light-grey;
+                    background-color: $water;
+                    margin-bottom: 2em;
+                }
+            }
+            li, span {
+                @include link($pure-grey);
+                font-size: 20px;
+            }
+            li {
+                margin: 1.5em 0;
+            }
+            span {
+                margin: 0.5em 0;
+            }
+        }
+    }
+    #background {
+        width: 100%;
+        height: 30em;
+        background-image: url(../img/1.jpg);
+    } 
+}

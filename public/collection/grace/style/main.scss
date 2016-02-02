@@ -5,3 +5,13 @@
 @import 'components/footer';
 @import 'components/banner';
 @import 'components/sections';
+
+body {
+    background-color: $milk-white;
+}
+#mega-container {
+    background-color: $pure-white;
+    box-shadow: 0 0 1em $pure-grey;
+    width: 64em;
+    margin: auto;
+}
