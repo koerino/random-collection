@@ -36,6 +36,9 @@ $soft-green: #73F7DD;
     font-size: 16px;
     font-family: 'Lato';
     padding: 0.75em 1.5em;
+    @include responsive(sm) {
+        font-size: 12px;
+    }
     &:hover {
         cursor: pointer;
         background-color: darken($colour, 5%);
@@ -49,9 +52,13 @@ header {
     text-align: center;
     padding-top: 1em;
     img {
-        width: 70px;
+        width: 70px; 
         height: 70px;
         vertical-align: middle;
+        @include responsive(sm) {
+            width: 35px;
+            height: 35px;
+        }
     }
     h1 {
         font-size: 42px;
@@ -60,16 +67,26 @@ header {
         display: inline-block;
         vertical-align: middle;
         margin: 1em 0 0.5em 0.5em;
+        @include responsive(sm) {
+            font-size: 26px;
+        }
     }
     span {
         font-size: 30px;
         font-weight: 700;
         color: $pure-grey;
         display: block;
+        @include responsive(sm) {
+            font-size: 16px;
+        }
     }
 }
 #mega-container {
-    padding: 0 3em 3em;
+    padding-bottom: 3em;
+    @include responsive(lg) {
+        padding-left: 3em;
+        padding-right: 3em;
+    }
     .row {
         margin-top: 1.5em;
         display: flex;
@@ -83,6 +100,10 @@ header {
         margin: 1em 1em;
         border: 1px solid $platinum;
         background-size: cover;
+        @include responsive(sm) {
+            width: 240px;
+            height: 240px;
+        }
         &:hover {
             .overlay {
                 opacity: 1;
@@ -107,6 +128,9 @@ header {
         .res {
             color: $soft-green;
             margin-left: 0.75em;
+            @include responsive(sm) {
+                font-size: 12px;
+            }
         }
     }
 }
