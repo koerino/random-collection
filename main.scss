@@ -103,6 +103,7 @@ header {
         @include responsive(sm) {
             width: 240px;
             height: 240px;
+            margin-top: 3.25em;
         }
         &:hover {
             .overlay {
@@ -117,6 +118,15 @@ header {
             display: inline-block;
         }
         opacity: 0;
+        @include responsive(sm) {
+            opacity: 1;
+            background-color: transparent;
+            height: 2em;
+            margin-top: 260px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         @include transition(all, 0.5s, linear);
         .view {
             @include buttonlike(lighten($pink-red, 15%));
@@ -147,5 +157,10 @@ footer {
         &:hover {
             color: $dark-grey;
         }
+    }
+    @include responsive(sm) {
+        font-size: 13px;
+        padding-right: 0.5em;
+        margin-top: 3em;
     }
 }

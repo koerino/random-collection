@@ -18,8 +18,9 @@ header {
         border: 1px solid $pure-black;
         outline: none;
     }
-    button {
+    #search {
         @include buttonlike($dark-cyan);
+        border-radius: 0;
         border: none;
         margin-right: 2.5em;
     }

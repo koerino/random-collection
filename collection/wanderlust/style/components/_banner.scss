@@ -54,9 +54,10 @@
                 font-size: 14px;
             }
         }
-        button {
+        #search {
             @include buttonlike-base;
             @include buttonlike-2;
+            border-radius: 0;
             &:focus {
                 outline: 0;
             }
