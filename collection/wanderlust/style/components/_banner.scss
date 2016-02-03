@@ -57,6 +57,7 @@
         #search {
             @include buttonlike-base;
             @include buttonlike-2;
+            -webkit-appearance: none;
             -webkit-border-radius: 0;
             &:focus {
                 outline: 0;
