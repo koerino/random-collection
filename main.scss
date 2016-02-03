@@ -123,6 +123,7 @@ header {
             background-color: transparent;
             height: 2em;
             margin-top: 260px;
+            margin-bottom: 30px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -161,6 +162,5 @@ footer {
     @include responsive(sm) {
         font-size: 13px;
         padding-right: 0.5em;
-        margin-top: 3em;
     }
 }
