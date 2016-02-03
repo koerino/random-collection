@@ -21,6 +21,9 @@
         @include responsive(sm) {
             margin-top: 0.5em;
             text-align: center;
+            span {
+                margin-top: 0.5em;
+            }
         }
     }
     span {

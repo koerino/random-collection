@@ -20,7 +20,7 @@ header {
     }
     #search {
         @include buttonlike($dark-cyan);
-        border-radius: 0;
+        -webkit-border-radius: 0;
         border: none;
         margin-right: 2.5em;
     }
