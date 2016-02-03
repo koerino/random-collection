@@ -103,7 +103,7 @@ header {
         @include responsive(sm) {
             width: 240px;
             height: 240px;
-            margin-top: 3.25em;
+            margin: 1.75em 0;
         }
         &:hover {
             .overlay {
