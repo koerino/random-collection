@@ -20,7 +20,7 @@
     }
     h2 {
         @include font;
-        margin: 0 2em 2.25em;
+        margin: 0 0 2.25em;
         @include responsive(md) {
             font-size: 20px;
         }
