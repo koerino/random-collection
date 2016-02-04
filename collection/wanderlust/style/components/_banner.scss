@@ -49,16 +49,16 @@
             padding: 0.5em 0.75em;
             color: $pure-grey;
             outline: 0;
+            border: 2px solid transparent;
+            -webkit-border-radius: 0;
             @include responsive(sm) {
                 padding: 0.45em 0.75em;
                 font-size: 14px;
             }
         }
-        #search {
+        button {
             @include buttonlike-base;
             @include buttonlike-2;
-            -webkit-appearance: none;
-            -webkit-border-radius: 0;
             &:focus {
                 outline: 0;
             }

@@ -82,10 +82,8 @@ header {
     }
 }
 #mega-container {
-    padding-bottom: 5em;
     @include responsive(lg) {
-        padding-left: 3em;
-        padding-right: 3em;
+        padding: 0 3em 3em;
     }
     .row {
         margin-top: 1.5em;
@@ -93,9 +91,6 @@ header {
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        @include responsive(sm) {
-            margin-top: 0;
-        }
     }
     .grid {
         width: 320px;
@@ -103,10 +98,12 @@ header {
         margin: 1em 1em;
         border: 1px solid $platinum;
         background-size: cover;
+        @media screen and (max-width: 1024px) {
+            margin-bottom: 5em;
+        }
         @include responsive(sm) {
             width: 240px;
             height: 240px;
-            margin-top: 3.5em;
         }
         &:hover {
             .overlay {
@@ -121,7 +118,7 @@ header {
             display: inline-block;
         }
         opacity: 0;
-        @include responsive(sm) {
+        @media screen and (max-width: 1024px) {
             opacity: 1;
             background-color: transparent;
             height: 2em;
@@ -129,6 +126,9 @@ header {
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+        @include responsive(md) {
+            margin-top: 340px;
         }
         @include transition(all, 0.5s, linear);
         .view {
@@ -162,7 +162,7 @@ footer {
         }
     }
     @include responsive(sm) {
-        font-size: 13px;
+        font-size: 14px;
         padding-right: 0.5em;
     }
 }

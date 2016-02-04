@@ -52,7 +52,7 @@
         height: inherit;
         background-color: rgba($pure-black, 0.35);
         @include transition(opacity, 0.5s, ease);
-        @include responsive(sm) {
+        @media screen and (max-width: 1024px) {
             opacity: 1;
             background-color: transparent;
         }
@@ -64,7 +64,7 @@
             padding-top: 0.5em;
             height: 0;
             @include transition(all, 0.5s, linear, 0.5s);
-            @include responsive(sm) {
+            @media screen and (max-width: 1024px) {
                 height: 2.5em;
                 opacity: 1;
             }

@@ -20,10 +20,8 @@
         float: right;
         @include responsive(sm) {
             margin-top: 0.5em;
+            line-height: 2em;
             text-align: center;
-            span {
-                margin-top: 0.5em;
-            }
         }
     }
     span {
