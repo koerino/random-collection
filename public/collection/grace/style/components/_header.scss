@@ -15,7 +15,9 @@ header {
         height: 30px;
         width: 15em;
         padding: 0 0.25em;
-        border: 1px solid $pure-black;
+        border: 1px solid $dark-grey;
+        -webkit-border-radius: 0;
+        -webkit-appearance: none;
         outline: none;
     }
     button {

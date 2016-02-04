@@ -82,10 +82,8 @@ header {
     }
 }
 #mega-container {
-    padding-bottom: 3em;
     @include responsive(lg) {
-        padding-left: 3em;
-        padding-right: 3em;
+        padding: 0 3em 3em;
     }
     .row {
         margin-top: 1.5em;
@@ -100,6 +98,9 @@ header {
         margin: 1em 1em;
         border: 1px solid $platinum;
         background-size: cover;
+        @media screen and (max-width: 1024px) {
+            margin-bottom: 5em;
+        }
         @include responsive(sm) {
             width: 240px;
             height: 240px;
@@ -117,6 +118,18 @@ header {
             display: inline-block;
         }
         opacity: 0;
+        @media screen and (max-width: 1024px) {
+            opacity: 1;
+            background-color: transparent;
+            height: 2em;
+            margin-top: 260px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @include responsive(md) {
+            margin-top: 340px;
+        }
         @include transition(all, 0.5s, linear);
         .view {
             @include buttonlike(lighten($pink-red, 15%));
@@ -147,5 +160,9 @@ footer {
         &:hover {
             color: $dark-grey;
         }
+    }
+    @include responsive(sm) {
+        font-size: 14px;
+        padding-right: 0.5em;
     }
 }
