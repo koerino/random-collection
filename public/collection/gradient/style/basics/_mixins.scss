@@ -1,26 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu);
 
-//Default font-size is 16px, font-weight is 400, font-family is Ubuntu, sans-serif. For small screens the default font-size is 12px
+//Default font-size is 16px, font-weight is 400, font-family is Ubuntu, sans-serif
 @mixin font($size: 16px, $weight: 400, $family: 'Ubuntu') {
     font-size: $size;
     font-weight: $weight;
     font-family: $family;
-    @include responsive(sm) {
-        font-size: 12px;
-    }
-}
-
-//responsive design breakpoints
-@mixin responsive($deviceSize) {
-    @if $deviceSize == sm {
-        @media screen and (max-width: 767px) {@content}
-    }
-    @if $deviceSize == md {
-        @media screen and (min-width: 768px) and (max-width: 1023px) {@content}
-    }
-    @if $deviceSize == lg {
-        @media screen and (min-width: 1024px) {@content}
-    }
 }
 
 //CSS3 transition
@@ -70,33 +54,6 @@
     &:hover {
         background-color: rgba($colour, 0.2);
         cursor: pointer;
-    }
-}
-
-//button-like links base style
-@mixin buttonlike-base($colour: $milk-white, $font-size: 16px) {
-    @include font($font-size);
-    @include responsive(sm) {
-        font-size: 12px;
-    }
-    text-decoration: none;
-    color: $colour;
-    padding: 0.75em 1.5em;
-    border: 2px solid $colour;
-    &:hover {
-        background-color: rgba($colour, 0.15);
-        cursor: pointer;
-    }
-}
-
-//button-like links style 2
-@mixin buttonlike-2($colour) {
-    color: $milk-white;
-    border-color: $colour;
-    background-color: $colour;
-    &:hover {
-        border-color: darken($colour, 5%);
-        background-color: darken($colour, 5%);
     }
 }
 
