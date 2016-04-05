@@ -1,10 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu);
 
 //Default font-size is 16px, font-weight is 400, font-family is Ubuntu, sans-serif
-@mixin font($size: 16px, $weight: 400, $family: 'Ubuntu') {
+@mixin font($size: 16px, $weight: 400) {
     font-size: $size;
     font-weight: $weight;
-    font-family: $family;
+    font-family: 'Ubuntu';
 }
 
 //CSS3 transition
@@ -41,18 +41,15 @@
 }
 
 //button-like links base style
-@mixin button-like-base($colour: $pure-white, $font-size: 16px) {
-    @include font($font-size, 400, 'Lato');
+@mixin button-like($colour, $font-size) {
+    @include font($font-size);
     @include border-radius(10px);
-    @include responsive(sm) {
-        font-size: 12px;
-    }
     text-decoration: none;
-    color: $colour;
+    color: $pure-white;
+    background-color: $colour;
     padding: 0.75em 2em;
-    border: 2px solid $colour;
     &:hover {
-        background-color: rgba($colour, 0.2);
+        background-color: darken($colour, 5%);
         cursor: pointer;
     }
 }
