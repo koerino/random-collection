@@ -1,0 +1,185 @@
+#A, #C {
+    height: 48em;
+}
+#B, #space, #D {
+    height: 36em;
+}
+#A {
+    @include center(column);
+    background-color: $flour;
+    color: $dark-grey;
+    > div {
+        width: 50em;
+        height: 32em;
+        background-image: url(../assets/2.jpg);
+        background-size: cover;
+        margin-top: 3em;
+    }
+    h2  {
+        @include font(32px);
+    }
+    span {
+        @include font;
+        color: $pure-grey;
+    }
+}
+#B {
+    @include center;
+    background-color: $milk-white;
+    > div {
+        width: 50%;
+        @include center(column);
+    }
+    #left {
+        padding-left: 3em;
+        padding-right: 1.5em;
+        h5 {
+            @include font;
+            color: $dark-grey;
+        }
+        span, p {
+            @include font(13px);
+            color: $light-grey;
+            margin-top: 1em;
+        }
+        p {
+            color: $pure-grey;
+        }
+    }
+    #right {
+        color: $dark-grey;
+        > div {
+            @include center;
+            margin: 1em 0;
+            >div {
+                width: 50%;
+            }
+        }
+        #a, #b, #c {
+            @include font;
+            width: 240px;
+            height: 120px;
+            background-size: cover;
+            margin-right: 1em;
+        }
+        #a {
+            background-image: url(../assets/3.jpg);
+        }   
+        #b {
+            background-image: url(../assets/4.jpg);
+        }
+        #c {
+            background-image: url(../assets/5.jpg);
+        }
+        .text {
+            h6 {
+                @include font;
+            }
+            span {
+                display: block;
+                color: $pure-grey;
+            }
+            a {
+                @include buttonlink($dark-cyan, 12px);
+                display: inline-block;
+                margin-top: 1em;
+            }
+        }
+    }
+}
+#C {
+    @include center(column);
+    background-color: lighten($light-pink, 15%);
+    h2 {
+        @include font(32px);
+        margin-bottom: 1em;
+    }
+    > div {
+        @include center;
+        a {
+            margin: 1.75em 1em;
+        }
+        a.left {
+            @include buttonlink($soft-pink);
+        }
+        a.right {
+            @include buttonlink($blue-ivy);
+        }
+    }
+    #a, #b {
+        width: 420px;
+        height: 360px;
+        margin: 0 1em;
+    }
+    #a {
+        background-image: url(../assets/6.jpg);    
+    }
+    #b {
+        background-image: url(../assets/7.jpg);
+    }
+    span {
+        @include font;
+        display: block;
+        margin-top: 3em;
+    }
+}
+#D {
+    @include center;
+    background-color: $pure-black;
+    padding: 0 3em;
+    > div {
+        width: 30%;
+        @include center(column);
+    }
+    #a {
+        @include font;
+        span {
+            color: $light-grey;
+            margin-bottom: 1.75em;
+        }
+        div {
+            width: 260px;
+            height: 360px;
+            background-image: url(../assets/8.jpg);
+        }            
+    }
+    #b {
+        @include font(13px);
+        color: $pure-grey;
+        span {
+            font-size: 16px;
+            color: $light-grey;
+            margin-bottom: 0.5em;
+        }
+        a {
+            @include buttonlink($light-yellow, 13px);
+            color: $pure-black;
+            margin-top: 1em;
+        }
+        p {
+            margin: 0.75em 0;
+        }
+    }
+    #c {
+        @include font;
+        color: $light-grey;
+        span {
+            margin-bottom: 5em;
+        }
+        div {
+            margin-bottom: 0.8em;
+        }
+        i {
+            font-size: 20px;
+            margin: 0 0.25em;
+            @include link($dark-grey);
+        }
+        #cpr {
+            a {
+                display: block;
+                @include link($dark-grey);
+                margin-bottom: 0.5em;
+            }
+        }
+    }
+}

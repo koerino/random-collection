@@ -1,0 +1,51 @@
+nav {
+    width: 25%;
+    height: 100vh;
+    background-color: $pure-black;
+    color: $pure-grey;
+    position:  fixed;
+    z-index: 10;
+    #links {
+        @include center(column);
+        @include font(20px);
+        margin-top: 1.5em;
+        a {
+            margin: 0.75em 0;
+            @include transition(linear, 0.5s);
+            color: $pure-grey;
+            &:hover {
+                cursor: pointer;
+                text-decoration: none;
+            }
+            &.pink:hover {
+                color: $light-pink;
+            }
+            &.yellow:hover {
+                color: $light-yellow;
+            }
+            &.silver:hover {
+                color: $platinum;
+            }
+        }
+    }
+}
+#intro {
+    @include center(column);
+    padding-top: 5em;
+    div {
+        background-image: url(../assets/1.jpg);
+        background-size: cover;
+        width: 10em;
+        height: 10em;
+        @include border-radius(50%);
+    }
+    span {
+        @include font;
+        margin-top: 1em;
+        color: $light-grey;
+    }
+    #title {
+        font-size: 22px;
+        margin-top: 1.25em;
+    }
+}
