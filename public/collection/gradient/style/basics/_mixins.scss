@@ -1,12 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu);
 
 //Default font-size is 16px, font-weight is 400, font-family is Ubuntu, sans-serif
-@mixin font($size: 16px, $weight: 400) {
+@mixin font($size: 16px) {
     font-size: $size;
-    font-weight: $weight;
+    font-weight: 400;
     font-family: 'Ubuntu';
 }
-
 //CSS3 transition
 @mixin transition($options...) {
     -webkit-transition: $options;
@@ -14,7 +13,6 @@
     -o-transition: $options;
     transition: $options;
 }
-
 //2D transformations
 @mixin translate($x, $y) {
     -webkit-transform: translate($x, $y);
@@ -22,14 +20,12 @@
     -ms-transform: translate($x, $y); 
     transform: translate($x, $y);
 }
-
 //border radius; circles
 @mixin border-radius($radius) {
     -webkit-border-radius: $radius;
     -moz-border-radius: $radius;
     border-radius: $radius;
 }
-
 //center elements using flex display
 @mixin center($direction: row) {
     display: flex;
@@ -40,10 +36,9 @@
     margin-right: auto;
 }
 
-//button-like links base style
-@mixin button-like($colour, $font-size) {
+//button-like links
+@mixin buttonlink($colour, $font-size: 16px) {
     @include font($font-size);
-    @include border-radius(10px);
     text-decoration: none;
     color: $pure-white;
     background-color: $colour;
@@ -53,7 +48,6 @@
         cursor: pointer;
     }
 }
-
 //hover effect for links
 @mixin link($colour) {
     color: $colour;
